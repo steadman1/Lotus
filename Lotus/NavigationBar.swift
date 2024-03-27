@@ -70,11 +70,12 @@ public class NavigationBar: ObservableObject {
 
 public struct CustomNavigationBar<Content: View>: View {
     @ObservedObject private var bar = NavigationBar.shared
+    @ObservedObject private var screen = Screen.shared
     public let items: [NavigationItem]
     public let content: Content
     private let height: CGFloat = 80
-    private let cornerRadius: CGFloat = 24
-    private let borderRadiusExtension: CGFloat = 3
+    private let cornerRadius: CGFloat = 32
+    private let borderRadiusExtension: CGFloat = 6
     private let backgroundColor = Color.blue
 
     public init(items: [NavigationItem], @ViewBuilder content: () -> Content) {
@@ -93,20 +94,10 @@ public struct CustomNavigationBar<Content: View>: View {
 
     private var navigationBarOverlay: some View {
         ZStack {
-            Rectangle()
-                .frame(height: cornerRadius)
-                .frame(maxWidth: .infinity)
-                .foregroundStyle(backgroundColor)
-                .background(backgroundColor)
-                .offset(y: height / 2 - cornerRadius / 2)
-            
             let borderRadius: CGFloat = cornerRadius + borderRadiusExtension
             RoundedRectangle(cornerRadius: borderRadius)
-                .frame(height: borderRadius * 2)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, -borderRadiusExtension)
+                .frame(width: screen.width - Screen.padding, height: height + borderRadiusExtension * 2)
                 .foregroundStyle(Color.red)
-                .offset(y: height / -2 + cornerRadius - borderRadiusExtension)
             
             HStack(spacing: 0) {
                 ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
@@ -121,8 +112,8 @@ public struct CustomNavigationBar<Content: View>: View {
                     }
                 }
             }
-            .frame(height: height)
-            .frame(maxWidth: .infinity)
+            .frame(width: screen.width, height: height)
+            .padding(.horizontal, -Screen.halfPadding - borderRadiusExtension)
             .background(backgroundColor) // Use appropriate color for background
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .edgesIgnoringSafeArea(.bottom)
