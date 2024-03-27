@@ -17,37 +17,50 @@ public struct NavigationItem: View {
     @ObservedObject private var bar = NavigationBar.shared
     @State private var animation: CGFloat = 0
 
-    public var icon: Image
-    public var activeIcon: Image?
-    public var width: CGFloat
+    public let name: String
+    public let icon: Image
+    public let activeIcon: Image?
+    public let width: CGFloat
     
     private let foregroundColor = Color.green
-    private let height: CGFloat = 40
+    private let height: CGFloat = 26
     
-    public init(from: Image, to: Image? = nil, width: CGFloat = 100) {
+    public init(name: String, from: Image, to: Image? = nil, width: CGFloat = 100) {
+        self.name = name
         self.icon = from
         self.activeIcon = to
         self.width = width
     }
     
     public var body: some View {
-        HStack {
-            (isActive ? activeIcon : icon)?
-                .scaleEffect(1 + 0.12 * animation)
-                .foregroundColor(foregroundColor)
-        }.frame(width: width, height: height)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .onAppear { animation = isActive ? 1 : 0 }
-            .onTapGesture { if bar.isChangeable { bar.selectionIndex = index } }
-            .onChange(of: bar.selectionIndex) { _, _ in animateSelectionChange() }
-            .onChange(of: animation) { _, _ in bar.isChangeable = false; resetChangeability() }
+        VStack {
+            HStack {
+                (isActive ? activeIcon : icon)?
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: height)
+                    .foregroundColor(foregroundColor)
+            }.frame(width: width, height: height)
+                .onTapGesture { if bar.isChangeable { bar.selectionIndex = index } }
+                .onChange(of: bar.selectionIndex) { _, _ in animateSelectionChange() }
+                .onChange(of: animation) { _, _ in bar.isChangeable = false; resetChangeability() }
+            Text(name)
+                .fontWeight(.bold)
+                .foregroundStyle(foregroundColor)
+        }.scaleEffect(1 - 0.15 * animation)
     }
     
     private var isActive: Bool { bar.selectionIndex == index }
     
     private func animateSelectionChange() {
-        withAnimation(.navigationItemBounce) { animation = isActive ? 1 : 0 }
+        withAnimation(.navigationItemBounce) {
+            animation = isActive ? 1 : 0
+        } completion: {
+            Screen.impact(enabled: true)
+            withAnimation(.navigationItemBounce) {
+                animation = 0
+            }
+        }
     }
     
     private func resetChangeability() {
@@ -73,10 +86,12 @@ public struct CustomNavigationBar<Content: View>: View {
     @ObservedObject private var screen = Screen.shared
     public let items: [NavigationItem]
     public let content: Content
-    private let height: CGFloat = 80
-    private let cornerRadius: CGFloat = 32
-    private let borderRadiusExtension: CGFloat = 6
-    private let backgroundColor = Color.blue
+    
+    private let height: CGFloat = 90
+    private let cornerRadius: CGFloat = 24
+    private let borderRadius: CGFloat = 3
+    private let backgroundColor = Color.white
+    private let borderColor = Color.green
 
     public init(items: [NavigationItem], @ViewBuilder content: () -> Content) {
         self.content = content()
@@ -94,26 +109,33 @@ public struct CustomNavigationBar<Content: View>: View {
 
     private var navigationBarOverlay: some View {
         ZStack {
-            let borderRadius: CGFloat = cornerRadius + borderRadiusExtension
-            RoundedRectangle(cornerRadius: borderRadius)
-                .frame(width: screen.width - Screen.padding, height: height + borderRadiusExtension * 2)
-                .foregroundStyle(Color.red)
-            
+            Rectangle()
+                .frame(height: cornerRadius)
+                .frame(maxWidth: .infinity)
+                .foregroundStyle(backgroundColor)
+                .background(backgroundColor)
+                .offset(y: height / 2 - cornerRadius / 2)
+
+            let borderCornerRadius: CGFloat = cornerRadius + borderRadius
+            RoundedRectangle(cornerRadius: borderCornerRadius)
+                .frame(height: borderCornerRadius * 2)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, -borderRadius)
+                .foregroundStyle(borderColor)
+                .offset(y: height / -2 + cornerRadius - borderRadius)
+
             HStack(spacing: 0) {
+                Spacer()
                 ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
                     item
                         .environment(\.index, index)
                         .environment(\.itemCount, items.count)
-                        .scaleEffect(bar.selectionIndex == index ? 1.1 : 1)
-                        .animation(.easeInOut(duration: 0.2), value: bar.selectionIndex)
 
-                    if index < items.count - 1 {
-                        Spacer()
-                    }
+                    Spacer()
                 }
             }
-            .frame(width: screen.width, height: height)
-            .padding(.horizontal, -Screen.halfPadding - borderRadiusExtension)
+            .frame(height: height)
+            .frame(maxWidth: .infinity)
             .background(backgroundColor) // Use appropriate color for background
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .edgesIgnoringSafeArea(.bottom)
@@ -122,7 +144,7 @@ public struct CustomNavigationBar<Content: View>: View {
 }
 
 extension Animation {
-    public static let navigationItemBounce: Animation = .interpolatingSpring(stiffness: 250, damping: 22).speed(1.25)
+    public static let navigationItemBounce: Animation = .interpolatingSpring(stiffness: 250, damping: 12).speed(1.8)
 }
 
 extension EnvironmentValues {

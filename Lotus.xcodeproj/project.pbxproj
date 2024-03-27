@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087587E52BB4989000DFCA82 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E42BB4989000DFCA82 /* Home.swift */; };
 		087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55882BB3B7F200F45562 /* SteadmanUI */; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
 		087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55902BB3B98000F45562 /* ViewExtractor */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087587E42BB4989000DFCA82 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		087587E32BB4987600DFCA82 /* Navigation Views */ = {
+			isa = PBXGroup;
+			children = (
+				087587E42BB4989000DFCA82 /* Home.swift */,
+			);
+			path = "Navigation Views";
+			sourceTree = "<group>";
+		};
 		087C558A2BB3B88300F45562 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		08EC0E972BB3896F00E4F592 /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				087587E32BB4987600DFCA82 /* Navigation Views */,
 				08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */,
 				08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */,
 				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
@@ -169,6 +180,7 @@
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
 				08EC0EAA2BB3899600E4F592 /* Test.swift in Sources */,
 				08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */,
+				087587E52BB4989000DFCA82 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
