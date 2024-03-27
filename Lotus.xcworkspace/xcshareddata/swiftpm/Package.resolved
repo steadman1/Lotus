@@ -1,0 +1,24 @@
+{
+  "originHash" : "952a96cd6b26cf8af47941ede1c964bd1dd7666aedf0d69b3d7dcba276f1c114",
+  "pins" : [
+    {
+      "identity" : "steadmanui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/steadman1/steadmanui",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ca6b7a32f4b997007a0848c4eb468c271236852b"
+      }
+    },
+    {
+      "identity" : "viewextractor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GeorgeElsham/ViewExtractor",
+      "state" : {
+        "revision" : "e20b1944524d4454c2a65c0054ce345c2c5d0185",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

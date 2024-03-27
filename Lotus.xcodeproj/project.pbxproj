@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55882BB3B7F200F45562 /* SteadmanUI */; };
+		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
+		087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55902BB3B98000F45562 /* ViewExtractor */; };
+		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
+		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
+		08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC0E9E2BB3897000E4F592 /* Assets.xcassets */; };
+		08EC0EAA2BB3899600E4F592 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EA92BB3899600E4F592 /* Test.swift */; };
+		08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */; };
+		08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */; };
+		08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
+		08EC0E9A2BB3896F00E4F592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08EC0E9E2BB3897000E4F592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08EC0EA02BB3897000E4F592 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
+		08EC0EA92BB3899600E4F592 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieFinder.swift; sourceTree = "<group>"; };
+		08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableDefaults.swift; sourceTree = "<group>"; };
+		08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08EC0E922BB3896F00E4F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */,
+				087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		087C558A2BB3B88300F45562 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08EC0E8C2BB3896F00E4F592 = {
+			isa = PBXGroup;
+			children = (
+				08EC0E972BB3896F00E4F592 /* Lotus */,
+				08EC0E962BB3896F00E4F592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08EC0E962BB3896F00E4F592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08EC0E952BB3896F00E4F592 /* Lotus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08EC0E972BB3896F00E4F592 /* Lotus */ = {
+			isa = PBXGroup;
+			children = (
+				08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */,
+				08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */,
+				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
+				08EC0E982BB3896F00E4F592 /* LotusApp.swift */,
+				08EC0E9A2BB3896F00E4F592 /* ContentView.swift */,
+				08EC0EA92BB3899600E4F592 /* Test.swift */,
+				08EC0E9E2BB3897000E4F592 /* Assets.xcassets */,
+				08EC0EA02BB3897000E4F592 /* Lotus.entitlements */,
+				087C558A2BB3B88300F45562 /* Preview Content */,
+			);
+			path = Lotus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08EC0E942BB3896F00E4F592 /* Lotus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08EC0EA62BB3897000E4F592 /* Build configuration list for PBXNativeTarget "Lotus" */;
+			buildPhases = (
+				08EC0E912BB3896F00E4F592 /* Sources */,
+				08EC0E922BB3896F00E4F592 /* Frameworks */,
+				08EC0E932BB3896F00E4F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lotus;
+			packageProductDependencies = (
+				087C55882BB3B7F200F45562 /* SteadmanUI */,
+				087C55902BB3B98000F45562 /* ViewExtractor */,
+			);
+			productName = Lotus;
+			productReference = 08EC0E952BB3896F00E4F592 /* Lotus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08EC0E8D2BB3896F00E4F592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					08EC0E942BB3896F00E4F592 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 08EC0E902BB3896F00E4F592 /* Build configuration list for PBXProject "Lotus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08EC0E8C2BB3896F00E4F592;
+			packageReferences = (
+				087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */,
+				087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */,
+			);
+			productRefGroup = 08EC0E962BB3896F00E4F592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08EC0E942BB3896F00E4F592 /* Lotus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08EC0E932BB3896F00E4F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */,
+				08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08EC0E912BB3896F00E4F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */,
+				08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */,
+				08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */,
+				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
+				08EC0EAA2BB3899600E4F592 /* Test.swift in Sources */,
+				08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		08EC0EA42BB3897000E4F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		08EC0EA52BB3897000E4F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		08EC0EA72BB3897000E4F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";
+				DEVELOPMENT_TEAM = 925J898556;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = liminalcode.Lotus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08EC0EA82BB3897000E4F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";
+				DEVELOPMENT_TEAM = 925J898556;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = liminalcode.Lotus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08EC0E902BB3896F00E4F592 /* Build configuration list for PBXProject "Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08EC0EA42BB3897000E4F592 /* Debug */,
+				08EC0EA52BB3897000E4F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08EC0EA62BB3897000E4F592 /* Build configuration list for PBXNativeTarget "Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08EC0EA72BB3897000E4F592 /* Debug */,
+				08EC0EA82BB3897000E4F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/steadman1/steadmanui";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GeorgeElsham/ViewExtractor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		087C55882BB3B7F200F45562 /* SteadmanUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */;
+			productName = SteadmanUI;
+		};
+		087C55902BB3B98000F45562 /* ViewExtractor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */;
+			productName = ViewExtractor;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 08EC0E8D2BB3896F00E4F592 /* Project object */;
+}
