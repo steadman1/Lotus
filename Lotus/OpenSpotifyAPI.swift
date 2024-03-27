@@ -12,7 +12,7 @@ struct AccessToken: Decodable {
     let accessToken: String
 }
 
-struct FriendActivity: Codable {
+struct SpotifyFriendActivity: Codable {
     let friends: [Friend]
 }
 
@@ -53,7 +53,7 @@ struct TrackContext: Codable {
     let index: Int
 }
 
-class SpotifyAPI {
+class OpenSpotifyAPI {
     let session = URLSession.shared
     
     func getWebAccessToken(spDcCookie: String, completion: @escaping (AccessToken?) -> Void) {
@@ -78,7 +78,7 @@ class SpotifyAPI {
         }.resume()
     }
     
-    func getFriendActivity(webAccessToken: String, completion: @escaping (FriendActivity?) -> Void) {
+    func getFriendActivity(webAccessToken: String, completion: @escaping (SpotifyFriendActivity?) -> Void) {
         guard let url = URL(string: "https://spclient.wg.spotify.com/presence-view/v1/buddylist") else { return }
         
         var request = URLRequest(url: url)
@@ -91,7 +91,7 @@ class SpotifyAPI {
             }
             
             do {
-                let friendActivity = try JSONDecoder().decode(FriendActivity.self, from: data)
+                let friendActivity = try JSONDecoder().decode(SpotifyFriendActivity.self, from: data)
                 completion(friendActivity)
             } catch {
                 print("Error decoding friend activity: \(error)")

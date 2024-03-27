@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		087587E52BB4989000DFCA82 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E42BB4989000DFCA82 /* Home.swift */; };
+		087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E62BB4CE9700DFCA82 /* FriendActivity.swift */; };
+		087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */; };
 		087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55882BB3B7F200F45562 /* SteadmanUI */; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
 		087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55902BB3B98000F45562 /* ViewExtractor */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
 		08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC0E9E2BB3897000E4F592 /* Assets.xcassets */; };
-		08EC0EAA2BB3899600E4F592 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EA92BB3899600E4F592 /* Test.swift */; };
+		08EC0EAA2BB3899600E4F592 /* OpenSpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EA92BB3899600E4F592 /* OpenSpotifyAPI.swift */; };
 		08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */; };
 		08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */; };
 		08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */; };
@@ -22,13 +24,15 @@
 
 /* Begin PBXFileReference section */
 		087587E42BB4989000DFCA82 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		087587E62BB4CE9700DFCA82 /* FriendActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivity.swift; sourceTree = "<group>"; };
+		087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPI.swift; sourceTree = "<group>"; };
 		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
 		08EC0E9A2BB3896F00E4F592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08EC0E9E2BB3897000E4F592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08EC0EA02BB3897000E4F592 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
-		08EC0EA92BB3899600E4F592 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		08EC0EA92BB3899600E4F592 /* OpenSpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSpotifyAPI.swift; sourceTree = "<group>"; };
 		08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieFinder.swift; sourceTree = "<group>"; };
 		08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableDefaults.swift; sourceTree = "<group>"; };
 		08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -88,10 +92,12 @@
 				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
 				08EC0E982BB3896F00E4F592 /* LotusApp.swift */,
 				08EC0E9A2BB3896F00E4F592 /* ContentView.swift */,
-				08EC0EA92BB3899600E4F592 /* Test.swift */,
+				08EC0EA92BB3899600E4F592 /* OpenSpotifyAPI.swift */,
+				087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */,
 				08EC0E9E2BB3897000E4F592 /* Assets.xcassets */,
 				08EC0EA02BB3897000E4F592 /* Lotus.entitlements */,
 				087C558A2BB3B88300F45562 /* Preview Content */,
+				087587E62BB4CE9700DFCA82 /* FriendActivity.swift */,
 			);
 			path = Lotus;
 			sourceTree = "<group>";
@@ -177,8 +183,10 @@
 				08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */,
 				08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */,
 				08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */,
+				087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
-				08EC0EAA2BB3899600E4F592 /* Test.swift in Sources */,
+				087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */,
+				08EC0EAA2BB3899600E4F592 /* OpenSpotifyAPI.swift in Sources */,
 				08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */,
 				087587E52BB4989000DFCA82 /* Home.swift in Sources */,
 			);

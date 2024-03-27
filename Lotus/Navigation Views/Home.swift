@@ -12,19 +12,19 @@ struct Home: View {
     @EnvironmentObject var defaults: ObservableDefaults
     @EnvironmentObject var screen: Screen
     
+    @StateObject var spotifyWebAPI = SpotifyWebAPI.shared
+    
     @State var sp_dc: String?
-    @State var friendActivity: FriendActivity?
+    @State var friendActivity: SpotifyFriendActivity?
     @State var refresh_sp_dc = false
     
     var body: some View {
         VStack {
             if friendActivity != nil {
-                ForEach(friendActivity!.friends) { friend in
-                    Text(friend.user.name)
-                }
+                FriendActivity(friendActivity: friendActivity!)
             }
         }.sheet(isPresented: $refresh_sp_dc) {
-            CookieFinder(url: URL(string: "https://open.spotify.com/")!,
+            CookieFinder(url: URL(string: "https://accounts.spotify.com/login")!,
                          cookieName: "sp_dc") { cookie in
                 sp_dc = cookie.value
                 defaults.sp_dc = cookie.value
@@ -35,8 +35,8 @@ struct Home: View {
             
     }
     
-    func handleRefresh_sp_dc() {
-        DispatchQueue.main.async { refresh_sp_dc = true }
+    func handleRefresh_sp_dc(_ condition: Bool = true) {
+        DispatchQueue.main.async { refresh_sp_dc = condition }
     }
     
     func handleStored_sp_dc() {
@@ -54,15 +54,16 @@ struct Home: View {
             return
         }
         
-        let spotifyAPI = SpotifyAPI()
-        spotifyAPI.getWebAccessToken(spDcCookie: newValue) { accessToken in
+        let openSpotifyAPI = OpenSpotifyAPI()
+        openSpotifyAPI.getWebAccessToken(spDcCookie: newValue) { accessToken in
             guard let accessToken = accessToken else { return }
-            print("Access Token: \(accessToken.accessToken)")
+            spotifyWebAPI.authenticate(accessToken: accessToken.accessToken)
             
-            spotifyAPI.getFriendActivity(webAccessToken: accessToken.accessToken) { friendActivity in
+            openSpotifyAPI.getFriendActivity(webAccessToken: accessToken.accessToken) { friendActivity in
                 
                 self.friendActivity = friendActivity
             }
         }
+        handleRefresh_sp_dc(false)
     }
 }

@@ -23,7 +23,6 @@ public struct NavigationItem: View {
     public let width: CGFloat
     
     private let foregroundColor = Color.green
-    private let height: CGFloat = 26
     
     public init(name: String, from: Image, to: Image? = nil, width: CGFloat = 100) {
         self.name = name
@@ -38,16 +37,17 @@ public struct NavigationItem: View {
                 (isActive ? activeIcon : icon)?
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: height)
+                    .frame(height: NavigationBar.iconHeight)
                     .foregroundColor(foregroundColor)
-            }.frame(width: width, height: height)
+            }.frame(width: width, height: NavigationBar.iconHeight)
                 .onTapGesture { if bar.isChangeable { bar.selectionIndex = index } }
                 .onChange(of: bar.selectionIndex) { _, _ in animateSelectionChange() }
                 .onChange(of: animation) { _, _ in bar.isChangeable = false; resetChangeability() }
             Text(name)
+                .font(.caption)
                 .fontWeight(.bold)
                 .foregroundStyle(foregroundColor)
-        }.scaleEffect(1 - 0.15 * animation)
+        }.scaleEffect(1 - 0.1 * animation)
     }
     
     private var isActive: Bool { bar.selectionIndex == index }
@@ -56,7 +56,7 @@ public struct NavigationItem: View {
         withAnimation(.navigationItemBounce) {
             animation = isActive ? 1 : 0
         } completion: {
-            Screen.impact(enabled: true)
+            Screen.impact(enabled: true, style: .soft)
             withAnimation(.navigationItemBounce) {
                 animation = 0
             }
@@ -78,6 +78,8 @@ public class NavigationBar: ObservableObject {
     @Published var selectionIndex = 0
     
     private init() {} // Ensures NavigationBar is a true singleton
+    
+    public static let iconHeight: CGFloat = 24
 }
 
 
@@ -87,7 +89,6 @@ public struct CustomNavigationBar<Content: View>: View {
     public let items: [NavigationItem]
     public let content: Content
     
-    private let height: CGFloat = 90
     private let cornerRadius: CGFloat = 24
     private let borderRadius: CGFloat = 3
     private let backgroundColor = Color.white
@@ -108,7 +109,8 @@ public struct CustomNavigationBar<Content: View>: View {
     }
 
     private var navigationBarOverlay: some View {
-        ZStack {
+        let height = NavigationBar.iconHeight + Screen.padding * 3 // 2 + 1 to account for the name of each nav item
+        return ZStack(alignment: .center) {
             Rectangle()
                 .frame(height: cornerRadius)
                 .frame(maxWidth: .infinity)
@@ -124,7 +126,7 @@ public struct CustomNavigationBar<Content: View>: View {
                 .foregroundStyle(borderColor)
                 .offset(y: height / -2 + cornerRadius - borderRadius)
 
-            HStack(spacing: 0) {
+            HStack(alignment: .center, spacing: 0) {
                 Spacer()
                 ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
                     item
@@ -139,12 +141,12 @@ public struct CustomNavigationBar<Content: View>: View {
             .background(backgroundColor) // Use appropriate color for background
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .edgesIgnoringSafeArea(.bottom)
-        }
+        }.offset(y: height / 2 - Screen.padding * 1.5)
     }
 }
 
 extension Animation {
-    public static let navigationItemBounce: Animation = .interpolatingSpring(stiffness: 250, damping: 12).speed(1.8)
+    public static let navigationItemBounce: Animation = .interpolatingSpring(stiffness: 250, damping: 16).speed(2.5)
 }
 
 extension EnvironmentValues {
