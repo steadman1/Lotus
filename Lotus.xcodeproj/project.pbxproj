@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081F80EE2BB5F70E00D0D723 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 081F80ED2BB5F70E00D0D723 /* SteadmanUI */; };
+		081F80F02BB5F72100D0D723 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 081F80EF2BB5F72100D0D723 /* ViewExtractor */; };
+		081F80F22BB5F72800D0D723 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 081F80F12BB5F72800D0D723 /* SwiftSoup */; };
 		087587E52BB4989000DFCA82 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E42BB4989000DFCA82 /* Home.swift */; };
 		087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E62BB4CE9700DFCA82 /* FriendActivity.swift */; };
 		087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */; };
 		087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587EA2BB5037C00DFCA82 /* SimilarSongFinder.swift */; };
-		087587EE2BB503C800DFCA82 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 087587ED2BB503C800DFCA82 /* SwiftSoup */; };
 		087587F02BB5055E00DFCA82 /* MyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587EF2BB5055E00DFCA82 /* MyLibrary.swift */; };
-		087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55882BB3B7F200F45562 /* SteadmanUI */; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
-		087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 087C55902BB3B98000F45562 /* ViewExtractor */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
 		08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC0E9E2BB3897000E4F592 /* Assets.xcassets */; };
@@ -48,9 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				087C55912BB3B98000F45562 /* ViewExtractor in Frameworks */,
-				087C55892BB3B7F200F45562 /* SteadmanUI in Frameworks */,
-				087587EE2BB503C800DFCA82 /* SwiftSoup in Frameworks */,
+				081F80F02BB5F72100D0D723 /* ViewExtractor in Frameworks */,
+				081F80EE2BB5F70E00D0D723 /* SteadmanUI in Frameworks */,
+				081F80F22BB5F72800D0D723 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,9 +127,9 @@
 			);
 			name = Lotus;
 			packageProductDependencies = (
-				087C55882BB3B7F200F45562 /* SteadmanUI */,
-				087C55902BB3B98000F45562 /* ViewExtractor */,
-				087587ED2BB503C800DFCA82 /* SwiftSoup */,
+				081F80ED2BB5F70E00D0D723 /* SteadmanUI */,
+				081F80EF2BB5F72100D0D723 /* ViewExtractor */,
+				081F80F12BB5F72800D0D723 /* SwiftSoup */,
 			);
 			productName = Lotus;
 			productReference = 08EC0E952BB3896F00E4F592 /* Lotus.app */;
@@ -448,20 +448,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		087587ED2BB503C800DFCA82 /* SwiftSoup */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
-			productName = SwiftSoup;
-		};
-		087C55882BB3B7F200F45562 /* SteadmanUI */ = {
+		081F80ED2BB5F70E00D0D723 /* SteadmanUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */;
 			productName = SteadmanUI;
 		};
-		087C55902BB3B98000F45562 /* ViewExtractor */ = {
+		081F80EF2BB5F72100D0D723 /* ViewExtractor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */;
 			productName = ViewExtractor;
+		};
+		081F80F12BB5F72800D0D723 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

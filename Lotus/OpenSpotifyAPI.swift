@@ -64,36 +64,53 @@ struct TrackContext: Codable {
     let index: Int
 }
 
-class OpenSpotifyAPI {
+class OpenSpotifyAPI: ObservableObject {
+    static let shared = OpenSpotifyAPI()
+    @Published var isAuthenticated: AuthenticationState = .none
+    var accessToken: String?
     let session = URLSession.shared
     
-    func getWebAccessToken(spDcCookie: String, completion: @escaping (AccessToken?) -> Void) {
-        guard let url = URL(string: "https://open.spotify.com/get_access_token?reason=transport&productType=web_player") else { return }
+    func authenticate(spDcCookie: String) {
+        guard let url = URL(string: "https://open.spotify.com/get_access_token?reason=transport&productType=web_player") else {
+            return
+        }
         
         var request = URLRequest(url: url)
         request.addValue("sp_dc=\(spDcCookie)", forHTTPHeaderField: "Cookie")
         
         session.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                completion(nil)
+                self.setAccessToken(with: nil)
                 return
             }
             
             do {
                 let accessToken = try JSONDecoder().decode(AccessToken.self, from: data)
-                completion(accessToken)
+                self.setAccessToken(with: accessToken.accessToken)
             } catch {
                 print("Error decoding access token: \(error)")
-                completion(nil)
+                self.setAccessToken(with: nil)
             }
         }.resume()
     }
     
-    func getFriendActivity(webAccessToken: String, completion: @escaping (SpotifyFriendActivity?) -> Void) {
-        guard let url = URL(string: "https://spclient.wg.spotify.com/presence-view/v1/buddylist") else { return }
+    private func setAccessToken(with accessToken: String?) {
+        guard let accessToken else {
+            DispatchQueue.main.async { self.isAuthenticated = .failed }
+            return
+        }
+        
+        self.accessToken = accessToken
+        DispatchQueue.main.async { self.isAuthenticated = .success }
+    }
+    
+    func getFriendActivity(completion: @escaping (SpotifyFriendActivity?) -> Void) {
+        guard let url = URL(string: "https://spclient.wg.spotify.com/presence-view/v1/buddylist"), let accessToken = self.accessToken else {
+            return
+        }
         
         var request = URLRequest(url: url)
-        request.addValue("Bearer \(webAccessToken)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         
         session.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -109,6 +126,10 @@ class OpenSpotifyAPI {
                 completion(nil)
             }
         }.resume()
+    }
+    
+    enum AuthenticationState {
+        case none, failed, success
     }
 }
 
