@@ -1,5 +1,5 @@
 {
-  "originHash" : "952a96cd6b26cf8af47941ede1c964bd1dd7666aedf0d69b3d7dcba276f1c114",
+  "originHash" : "49560bf0e9fc6194367e5273e8e224ea651f75536f23f62bc0a6fac779e176fe",
   "pins" : [
     {
       "identity" : "steadmanui",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "ca6b7a32f4b997007a0848c4eb468c271236852b"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup.git",
+      "state" : {
+        "revision" : "028487d4a8a291b2fe1b4392b5425b6172056148",
+        "version" : "2.7.2"
       }
     },
     {

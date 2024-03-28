@@ -14,6 +14,17 @@ struct AccessToken: Decodable {
 
 struct SpotifyFriendActivity: Codable {
     let friends: [Friend]
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let decodedFriends = try container.decode([Friend].self, forKey: .friends)
+        // Reverse the decoded array
+        self.friends = decodedFriends.reversed()
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case friends
+    }
 }
 
 struct Friend: Codable, Identifiable {
