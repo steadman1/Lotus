@@ -24,7 +24,14 @@ struct Home: View {
     
     var body: some View {
         VStack {
-            
+            Text("SUMMER")
+                .font(.serifTitle)
+            Text("STORIES")
+                .font(.serifTitleItalic)
+            Text("MENU TEST")
+                .font(.sansOperator)
+            Text("Lorem Ipsum")
+                .font(.serifBody)
         }
         .sheet(isPresented: $refresh_sp_dc) {
             CookieFinder(url: URL(string: "https://accounts.spotify.com/login")!,
@@ -33,6 +40,7 @@ struct Home: View {
                 defaults.sp_dc = cookie.value
             }
         }
+        .onAppear { printSystemFonts() }
         .onAppear { handleStored_sp_dc() }
         .onChange(of: sp_dc) { getFriendActivity($1) }
         .onChange(of: openSpotifyAPI.isAuthenticated) { _, newValue in
@@ -44,6 +52,18 @@ struct Home: View {
             }
         }
             
+    }
+
+    func printSystemFonts() {
+        // Use this identifier to filter out the system fonts in the logs.
+        let identifier: String = "[SYSTEM FONTS]"
+        // Here's the functionality that prints all the system fonts.
+        for family in UIFont.familyNames as [String] {
+            debugPrint("\(identifier) FONT FAMILY :  \(family)")
+            for name in UIFont.fontNames(forFamilyName: family) {
+                debugPrint("\(identifier) FONT NAME :  \(name)")
+            }
+        }
     }
     
     func handleRefresh_sp_dc(_ condition: Bool = true) {

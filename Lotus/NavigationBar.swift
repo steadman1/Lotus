@@ -43,9 +43,8 @@ public struct NavigationItem: View {
                 .onTapGesture { if bar.isChangeable { bar.selectionIndex = index } }
                 .onChange(of: bar.selectionIndex) { _, _ in animateSelectionChange() }
                 .onChange(of: animation) { _, _ in bar.isChangeable = false; resetChangeability() }
-            Text(name)
-                .font(.caption)
-                .fontWeight(.bold)
+            Text(name.uppercased())
+                .font(.sansNavigation)
                 .foregroundStyle(foregroundColor)
         }.scaleEffect(1 - 0.1 * animation)
     }
