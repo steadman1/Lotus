@@ -17,7 +17,7 @@ struct FriendActivity: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.horizontal) {
-                HStack {
+                HStack(spacing: Screen.halfPadding) {
                     ForEach(Array(zip(friendActivity.friends.indices, friendActivity.friends)), id: \.0) { index, friend in
                         ZStack {
                             if imageURLs.count > index {
