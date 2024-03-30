@@ -11,10 +11,10 @@
 		081F80F02BB5F72100D0D723 /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 081F80EF2BB5F72100D0D723 /* ViewExtractor */; };
 		081F80F22BB5F72800D0D723 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 081F80F12BB5F72800D0D723 /* SwiftSoup */; };
 		081F80F42BB6088900D0D723 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081F80F32BB6088900D0D723 /* Extensions.swift */; };
-		081F81182BB61BC300D0D723 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081F81142BB61BC300D0D723 /* NotoSans-Italic.ttf */; };
-		081F81192BB61BC300D0D723 /* NotoSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081F81152BB61BC300D0D723 /* NotoSans.ttf */; };
 		081F811C2BB6201F00D0D723 /* Times New Roman Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 081F811B2BB6201F00D0D723 /* Times New Roman Condensed.otf */; };
 		081F811E2BB620A700D0D723 /* Times New Roman Condensed Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 081F811D2BB620A700D0D723 /* Times New Roman Condensed Italic.otf */; };
+		081F81202BB6249800D0D723 /* Times New Roman Condensed Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 081F811F2BB6249800D0D723 /* Times New Roman Condensed Bold.otf */; };
+		081F81242BB71F4600D0D723 /* OpenSauceTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081F81232BB71F4600D0D723 /* OpenSauceTwo-Regular.ttf */; };
 		087587E52BB4989000DFCA82 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E42BB4989000DFCA82 /* Home.swift */; };
 		087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E62BB4CE9700DFCA82 /* FriendActivity.swift */; };
 		087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */; };
@@ -28,15 +28,19 @@
 		08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */; };
 		08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */; };
 		08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */; };
+		08FFD2ED2BB8A1EF008DFA7D /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */; };
+		08FFD2F12BB8B505008DFA7D /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD2F02BB8B505008DFA7D /* Spotify.swift */; };
+		08FFD2F42BB8B827008DFA7D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD2F32BB8B827008DFA7D /* KeychainAccess */; };
+		08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD2F52BB8BAD1008DFA7D /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		081F80F32BB6088900D0D723 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		081F80FE2BB6096900D0D723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		081F81142BB61BC300D0D723 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
-		081F81152BB61BC300D0D723 /* NotoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoSans.ttf; sourceTree = "<group>"; };
 		081F811B2BB6201F00D0D723 /* Times New Roman Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Times New Roman Condensed.otf"; sourceTree = "<group>"; };
 		081F811D2BB620A700D0D723 /* Times New Roman Condensed Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Times New Roman Condensed Italic.otf"; sourceTree = "<group>"; };
+		081F811F2BB6249800D0D723 /* Times New Roman Condensed Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Times New Roman Condensed Bold.otf"; sourceTree = "<group>"; };
+		081F81232BB71F4600D0D723 /* OpenSauceTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSauceTwo-Regular.ttf"; sourceTree = "<group>"; };
 		087587E42BB4989000DFCA82 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		087587E62BB4CE9700DFCA82 /* FriendActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivity.swift; sourceTree = "<group>"; };
 		087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPI.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieFinder.swift; sourceTree = "<group>"; };
 		08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableDefaults.swift; sourceTree = "<group>"; };
 		08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		08FFD2F02BB8B505008DFA7D /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		08FFD2F52BB8BAD1008DFA7D /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,9 @@
 			files = (
 				081F80F02BB5F72100D0D723 /* ViewExtractor in Frameworks */,
 				081F80EE2BB5F70E00D0D723 /* SteadmanUI in Frameworks */,
+				08FFD2ED2BB8A1EF008DFA7D /* SpotifyAPI in Frameworks */,
 				081F80F22BB5F72800D0D723 /* SwiftSoup in Frameworks */,
+				08FFD2F42BB8B827008DFA7D /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +79,10 @@
 		081F80F52BB608F500D0D723 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				081F81142BB61BC300D0D723 /* NotoSans-Italic.ttf */,
-				081F81152BB61BC300D0D723 /* NotoSans.ttf */,
+				081F81232BB71F4600D0D723 /* OpenSauceTwo-Regular.ttf */,
 				081F811B2BB6201F00D0D723 /* Times New Roman Condensed.otf */,
 				081F811D2BB620A700D0D723 /* Times New Roman Condensed Italic.otf */,
+				081F811F2BB6249800D0D723 /* Times New Roman Condensed Bold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 				08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */,
 				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
 				08EC0E982BB3896F00E4F592 /* LotusApp.swift */,
+				08FFD2F02BB8B505008DFA7D /* Spotify.swift */,
 				08EC0E9A2BB3896F00E4F592 /* ContentView.swift */,
 				08EC0EA92BB3899600E4F592 /* OpenSpotifyAPI.swift */,
 				087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */,
@@ -131,6 +140,7 @@
 				087587E62BB4CE9700DFCA82 /* FriendActivity.swift */,
 				087587EA2BB5037C00DFCA82 /* SimilarSongFinder.swift */,
 				081F80F32BB6088900D0D723 /* Extensions.swift */,
+				08FFD2F52BB8BAD1008DFA7D /* AlertItem.swift */,
 			);
 			path = Lotus;
 			sourceTree = "<group>";
@@ -155,6 +165,8 @@
 				081F80ED2BB5F70E00D0D723 /* SteadmanUI */,
 				081F80EF2BB5F72100D0D723 /* ViewExtractor */,
 				081F80F12BB5F72800D0D723 /* SwiftSoup */,
+				08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */,
+				08FFD2F32BB8B827008DFA7D /* KeychainAccess */,
 			);
 			productName = Lotus;
 			productReference = 08EC0E952BB3896F00E4F592 /* Lotus.app */;
@@ -188,6 +200,8 @@
 				087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */,
 				087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */,
 				087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+				08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 08EC0E962BB3896F00E4F592 /* Products */;
 			projectDirPath = "";
@@ -203,10 +217,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081F81192BB61BC300D0D723 /* NotoSans.ttf in Resources */,
+				081F81242BB71F4600D0D723 /* OpenSauceTwo-Regular.ttf in Resources */,
+				081F81202BB6249800D0D723 /* Times New Roman Condensed Bold.otf in Resources */,
 				087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */,
 				08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */,
-				081F81182BB61BC300D0D723 /* NotoSans-Italic.ttf in Resources */,
 				081F811E2BB620A700D0D723 /* Times New Roman Condensed Italic.otf in Resources */,
 				081F811C2BB6201F00D0D723 /* Times New Roman Condensed.otf in Resources */,
 			);
@@ -220,11 +234,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */,
+				08FFD2F12BB8B505008DFA7D /* Spotify.swift in Sources */,
 				08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */,
 				08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */,
 				087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */,
 				087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
+				08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */,
 				087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */,
 				081F80F42BB6088900D0D723 /* Extensions.swift in Sources */,
 				08EC0EAA2BB3899600E4F592 /* OpenSpotifyAPI.swift in Sources */,
@@ -365,6 +381,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lotus/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -373,14 +391,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = liminalcode.Lotus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spence.Lotus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -404,6 +422,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lotus/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -412,14 +432,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = liminalcode.Lotus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spence.Lotus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -477,6 +497,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
+		08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,6 +530,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
+			productName = SpotifyAPI;
+		};
+		08FFD2F32BB8B827008DFA7D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

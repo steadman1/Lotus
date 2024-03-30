@@ -7,12 +7,12 @@
 
 import Foundation
 
-class SpotifyWebAPI: ObservableObject {
-    static let shared = SpotifyWebAPI() // Singleton instance
+class SpotifyWebAPI_: ObservableObject {
+    static let shared = SpotifyWebAPI_() // Singleton instance
     @Published var isAuthenticated = false
-    private let clientID = "YOUR_CLIENT_ID"
-    private let clientSecret = "YOUR_CLIENT_SECRET"
-    private let redirectURI = "YOUR_REDIRECT_URI"
+    private let clientID = "8acae9ec1c1143afa985a5d52209680d"
+    private let clientSecret = "afb769f54dec49f2ba318c42ba7b0a40"
+    private let redirectURI = "lotus-for-spotify://spotify-login-callback"
     private let baseURL = "https://api.spotify.com/v1"
     private var accessToken: String?
     

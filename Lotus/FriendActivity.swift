@@ -12,7 +12,7 @@ struct FriendActivity: View {
     @State var friendActivity: SpotifyFriendActivity?
     
     let openSpotifyAPI = OpenSpotifyAPI.shared
-    let spotifyWebAPI = SpotifyWebAPI.shared
+    let spotifyWebAPI = SpotifyWebAPI_.shared
     
     var body: some View {
         VStack {

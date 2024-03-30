@@ -22,7 +22,7 @@ public struct NavigationItem: View {
     public let activeIcon: Image?
     public let width: CGFloat
     
-    private let foregroundColor = Color.green
+    private let foregroundColor = Color.foreground
     
     public init(name: String, from: Image, to: Image? = nil, width: CGFloat = 100) {
         self.name = name
@@ -43,9 +43,6 @@ public struct NavigationItem: View {
                 .onTapGesture { if bar.isChangeable { bar.selectionIndex = index } }
                 .onChange(of: bar.selectionIndex) { _, _ in animateSelectionChange() }
                 .onChange(of: animation) { _, _ in bar.isChangeable = false; resetChangeability() }
-            Text(name.uppercased())
-                .font(.sansNavigation)
-                .foregroundStyle(foregroundColor)
         }.scaleEffect(1 - 0.1 * animation)
     }
     
@@ -90,8 +87,8 @@ public struct CustomNavigationBar<Content: View>: View {
     
     private let cornerRadius: CGFloat = 24
     private let borderRadius: CGFloat = 3
-    private let backgroundColor = Color.white
-    private let borderColor = Color.green
+    private let backgroundColor = Color.background
+    private let borderColor = Color.foreground
 
     public init(items: [NavigationItem], @ViewBuilder content: () -> Content) {
         self.content = content()
@@ -110,21 +107,6 @@ public struct CustomNavigationBar<Content: View>: View {
     private var navigationBarOverlay: some View {
         let height = NavigationBar.iconHeight + Screen.padding * 3 // 2 + 1 to account for the name of each nav item
         return ZStack(alignment: .center) {
-            Rectangle()
-                .frame(height: cornerRadius)
-                .frame(maxWidth: .infinity)
-                .foregroundStyle(backgroundColor)
-                .background(backgroundColor)
-                .offset(y: height / 2 - cornerRadius / 2)
-
-            let borderCornerRadius: CGFloat = cornerRadius + borderRadius
-            RoundedRectangle(cornerRadius: borderCornerRadius)
-                .frame(height: borderCornerRadius * 2)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, -borderRadius)
-                .foregroundStyle(borderColor)
-                .offset(y: height / -2 + cornerRadius - borderRadius)
-
             HStack(alignment: .center, spacing: 0) {
                 Spacer()
                 ForEach(Array(zip(items.indices, items)), id: \.0) { index, item in
@@ -137,8 +119,10 @@ public struct CustomNavigationBar<Content: View>: View {
             }
             .frame(height: height)
             .frame(maxWidth: .infinity)
-            .background(backgroundColor) // Use appropriate color for background
-            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+            .background(LinearGradient(
+                colors: [backgroundColor.opacity(0.000001), backgroundColor],
+                startPoint: .top,
+                endPoint: UnitPoint(x: 0.5, y: 0.8))) // Use appropriate color for background
             .edgesIgnoringSafeArea(.bottom)
         }.offset(y: height / 2 - Screen.padding * 1.5)
     }

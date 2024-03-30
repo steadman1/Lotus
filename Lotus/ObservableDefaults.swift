@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 import UIKit
+import SwiftUI
+import SpotifyWebAPI
 
 class ObservableDefaults: ObservableObject {
     static var shared = ObservableDefaults()

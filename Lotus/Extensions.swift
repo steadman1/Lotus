@@ -10,11 +10,11 @@ import SwiftUI
 extension Font {
     static var serifTitle: Font {
         Font.custom("TimesNewRomanMTStd-Cond", size: 40)
-            .weight(.bold)
+            .weight(.regular)
     }
     static var serifTitleItalic: Font {
         Font.custom("TimesNewRomanMTStd-CondIt", size: 40)
-            .weight(.bold)
+            .weight(.regular)
     }
     static var sansOperator: Font {
         Font.custom("Noto Sans", size: 24)
@@ -25,7 +25,7 @@ extension Font {
             .weight(.regular)
     }
     static var sansNavigation: Font {
-        Font.custom("TimesNewRomanMTStd-Cond", size: 16)
-            .weight(.bold)
+        Font.custom("TimesNewRomanMTStd-Cond", size: 12)
+            .weight(.medium)
     }
 }

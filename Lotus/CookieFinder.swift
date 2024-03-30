@@ -12,6 +12,7 @@ struct CookieFinder: UIViewRepresentable {
     var url: URL
     var cookieName: String
     var onCookieFound: (HTTPCookie) -> Void
+    var onIncomingURL: (URL) -> Void
 
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -51,6 +52,40 @@ struct CookieFinder: UIViewRepresentable {
                 }
             }
         }
+        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            
+            let url = navigationAction.request.url
+            
+            // Check if the URL is the one you are interested in
+            if let url = url, shouldIntercept(url: url) {
+                self.parent.onIncomingURL(url)
+                decisionHandler(.cancel)
+
+                return
+            }
+            
+            // Allow the web view to continue loading URLs as normal
+            decisionHandler(.allow)
+        }
+        
+        private func shouldIntercept(url: URL) -> Bool {
+            // Determine whether you should intercept the URL
+            // You can check the URL scheme, host, path, or other properties
+            // For example, if you're looking for a specific callback:
+            return url.scheme == "lotus-for-spotify" && url.host == "spotify-login-callback"
+        }
     }
+    
+    struct WebViewWrapper: UIViewRepresentable {
+            let webView: WKWebView
+            
+            func makeUIView(context: Context) -> WKWebView {
+                return webView
+            }
+            
+            func updateUIView(_ uiView: WKWebView, context: Context) {
+            }
+        }
 }
 
