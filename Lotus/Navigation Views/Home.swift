@@ -29,14 +29,18 @@ struct Home: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                VStack(alignment: .leading) {
-                    Text("Good Evening,".uppercased())
-                        .font(.serifTitle)
-                    Text("Spencer.".uppercased())
-                        .font(.serifTitleItalic)
-                }.alignLeft()
-            }.padding(.horizontal, Screen.halfPadding)
+            Spacer().frame(height: Screen.padding)
+            VStack(alignment: .leading) {
+                LoungeGreeting()
+                    .alignLeft()
+                
+                LoungeMostPlayed()
+                
+                LoungeHopBackIn()
+            }.withNavBarPadding()
+                .withNavBarPadding()
+                .withNavBarPadding()
+            
         }
         .alert(item: $alert) { alert in
             Alert(title: alert.title, message: alert.message)
@@ -58,6 +62,14 @@ struct Home: View {
             handleRefreshAuthorization(!spotify.api.authorizationManager.isAuthorized())
         }
         //.onChange(of: sp_dc) { getFriendActivity($1) }
+    }
+    
+    private func calculateNavBarPadding() -> CGFloat {
+        let text = "Library"
+        let padding = text.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!) +
+            text.heightOfString(usingFont: UIFont(name: "Newake", size: 98)!) + Screen.padding
+        
+        return padding
     }
 
     func printSystemFonts() {
@@ -167,8 +179,4 @@ struct Home: View {
         openSpotifyAPI.authenticate(spDcCookie: newValue)
         handleRefreshAuthorization(false)
     }
-}
-
-extension Animation {
-    public static let lotusBounce: Animation = .interpolatingSpring(stiffness: 250, damping: 12).speed(1.2)
 }

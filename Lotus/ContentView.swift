@@ -13,13 +13,16 @@ struct ContentView: View {
     @EnvironmentObject var screen: Screen
     
     let navigationItems = [
-        NavigationItem(name: "Home",
+        NavigationItem(name: "Lounge",
                        from: Image(.house),
                        to: Image(.houseFill)),
+        NavigationItem(name: "Friends",
+                       from: Image(.magnifyingglass),
+                       to: Image(.magnifyingglassFill)),
         NavigationItem(name: "Search",
                        from: Image(.magnifyingglass),
                        to: Image(.magnifyingglassFill)),
-        NavigationItem(name: "My Library",
+        NavigationItem(name: "Library",
                        from: Image(.records),
                        to: Image(.recordsFill)),
     ]
@@ -28,5 +31,28 @@ struct ContentView: View {
         CustomNavigationBar(items: navigationItems) {
             Home()
         }
+    }
+}
+
+public struct WithNavBarPadding: ViewModifier {
+    public func body(content: Content) -> some View {
+        VStack {
+            content
+            Spacer().frame(height: calculateNavBarPadding())
+        }
+    }
+    
+    private func calculateNavBarPadding() -> CGFloat {
+        let text = "Library"
+        let padding = text.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!) +
+            text.heightOfString(usingFont: UIFont(name: "Newake", size: 98)!) + Screen.padding
+        
+        return padding
+    }
+}
+
+extension View {
+    func withNavBarPadding() -> some View {
+        self.modifier(WithNavBarPadding())
     }
 }
