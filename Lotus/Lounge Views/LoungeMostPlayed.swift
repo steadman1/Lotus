@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 import SteadmanUI
+import SpotifyWebAPI
 
 struct LoungeMostPlayed: View {
     @EnvironmentObject var screen: Screen
+    @EnvironmentObject var spotify: Spotify
+    
+    @State private var album: SpotifyWebAPI.Album? = nil
+    @State private var cancellables: Set<AnyCancellable> = []
     
     private let text = "Most Played"
     private let ratio: CGFloat = 42 / 318
@@ -17,12 +23,29 @@ struct LoungeMostPlayed: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            var width = screen.width - Screen.padding * 2 - (screen.width - Screen.padding * 2) * ratio
-            var fontSize = width * ratio * fontRatio
+            let width = screen.width - Screen.padding * 2 - (screen.width - Screen.padding * 2) * ratio
+            let fontSize = width * ratio * fontRatio
     
             HStack {
-                Rectangle()
-                    .frame(width: width, height: width)
+                AsyncImage(url: album?.images?.first?.url) { phase in
+                    ZStack {
+                        Rectangle()
+                            .frame(width: width, height: width)
+                            .background(Color.foreground)
+                        
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .frame(width: width, height: width)
+                                .background(Color.foreground)
+                                .transition(.opacity.animation(.snappy()))
+                        default:
+                            EmptyView()
+                        }
+                    }
+                }
+                
                 Spacer()
             }.padding(.horizontal, Screen.padding)
             HStack {
@@ -36,5 +59,48 @@ struct LoungeMostPlayed: View {
                     .alignRight()
             }.padding(.trailing, Screen.padding)
         }.padding(.vertical, Screen.padding)
+            .onAppear { fetchAndSetTopAlbum() }
+    }
+    
+    func fetchAndSetTopAlbum() {
+        let currentDate = Date()
+        let fourteenDaysAgo = Calendar.current.date(byAdding: .day, value: -14, to: currentDate)!
+        spotify.api.recentlyPlayed(.after(fourteenDaysAgo))
+            .sink { completion in
+                print(completion)
+            } receiveValue: { results in
+                self.album = calculateMostFrequentAlbum(history: results.items)
+            }.store(in: &cancellables)
+    }
+    
+    func calculateMostFrequentAlbum(history: [PlayHistory]) -> SpotifyWebAPI.Album? {
+        var albums: [String: AlbumWithCount] = [:]
+        
+        for item in history {
+            guard let album = item.track.album, let id = album.id else {
+                continue
+            }
+            
+            if albums.contains(where: { $0.key == id }) { albums[id]!.count += 1 }
+            else { albums[id] = AlbumWithCount(album: album) }
+        }
+        
+        if !albums.isEmpty {
+            let keys = Array(albums.keys)
+            var max = 0
+            var key = keys[0]
+            
+            for iterKey in Array(albums.keys) {
+                if albums[iterKey]!.count > max { max = albums[iterKey]!.count; key = iterKey }
+            }
+            
+            return albums[key]!.album
+        }
+        return nil
+    }
+    
+    struct AlbumWithCount {
+        let album: SpotifyWebAPI.Album
+        var count: Int = 0
     }
 }

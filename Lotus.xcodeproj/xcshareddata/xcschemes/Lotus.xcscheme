@@ -58,7 +58,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "CLIENT_SECRET"
-            value = "5f9e0d5714b94e64a6b0cae64f0a0e8a"
+            value = "81b053a8488d48bcbd275b82529b85b0"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

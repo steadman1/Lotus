@@ -19,6 +19,14 @@
 		087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */; };
 		087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587EA2BB5037C00DFCA82 /* SimilarSongFinder.swift */; };
 		087587F02BB5055E00DFCA82 /* MyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087587EF2BB5055E00DFCA82 /* MyLibrary.swift */; };
+		087AEBBC2BBBC8BB00394103 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087AEBBB2BBBC8BB00394103 /* WidgetKit.framework */; };
+		087AEBBE2BBBC8BB00394103 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087AEBBD2BBBC8BB00394103 /* SwiftUI.framework */; };
+		087AEBC12BBBC8BB00394103 /* LiveFriendActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBC02BBBC8BB00394103 /* LiveFriendActivityBundle.swift */; };
+		087AEBC32BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBC22BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift */; };
+		087AEBC52BBBC8BB00394103 /* LiveFriendActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBC42BBBC8BB00394103 /* LiveFriendActivity.swift */; };
+		087AEBC72BBBC8BB00394103 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBC62BBBC8BB00394103 /* AppIntent.swift */; };
+		087AEBC92BBBC8BD00394103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087AEBC82BBBC8BD00394103 /* Assets.xcassets */; };
+		087AEBCD2BBBC8BD00394103 /* LiveFriendActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 087AEBB92BBBC8BB00394103 /* LiveFriendActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
@@ -27,7 +35,6 @@
 		08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */; };
 		08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */; };
 		08EC0EB02BB3B2EF00E4F592 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */; };
-		08FFD2ED2BB8A1EF008DFA7D /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */; };
 		08FFD2F12BB8B505008DFA7D /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD2F02BB8B505008DFA7D /* Spotify.swift */; };
 		08FFD2F42BB8B827008DFA7D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD2F32BB8B827008DFA7D /* KeychainAccess */; };
 		08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD2F52BB8BAD1008DFA7D /* AlertItem.swift */; };
@@ -37,8 +44,37 @@
 		08FFD2FF2BBA3F67008DFA7D /* LoungeMostPlayed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD2FE2BBA3F67008DFA7D /* LoungeMostPlayed.swift */; };
 		08FFD3012BBA483D008DFA7D /* LoungeHopBackIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD3002BBA483D008DFA7D /* LoungeHopBackIn.swift */; };
 		08FFD3032BBA5D33008DFA7D /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD3022BBA5D33008DFA7D /* CustomTabView.swift */; };
-		08FFD3062BBB02C9008DFA7D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD3052BBB02C9008DFA7D /* ACarousel */; };
+		08FFD30D2BBB060F008DFA7D /* View+ReceiveTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD3082BBB060E008DFA7D /* View+ReceiveTimer.swift */; };
+		08FFD30E2BBB060F008DFA7D /* ACarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD3092BBB060F008DFA7D /* ACarousel.swift */; };
+		08FFD30F2BBB060F008DFA7D /* ACarouselAutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD30A2BBB060F008DFA7D /* ACarouselAutoScroll.swift */; };
+		08FFD3102BBB060F008DFA7D /* ACarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD30B2BBB060F008DFA7D /* ACarouselViewModel.swift */; };
+		08FFD3112BBB060F008DFA7D /* AppLifeCycleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFD30C2BBB060F008DFA7D /* AppLifeCycleModifier.swift */; };
+		08FFD3142BBB4B3C008DFA7D /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFD3132BBB4B3C008DFA7D /* SpotifyAPI */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		087AEBCB2BBBC8BD00394103 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08EC0E8D2BB3896F00E4F592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 087AEBB82BBBC8BB00394103;
+			remoteInfo = LiveFriendActivityExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		087AEBD12BBBC8BD00394103 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				087AEBCD2BBBC8BD00394103 /* LiveFriendActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		081F80F32BB6088900D0D723 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -51,6 +87,15 @@
 		087587E82BB4D04100DFCA82 /* SpotifyWebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWebAPI.swift; sourceTree = "<group>"; };
 		087587EA2BB5037C00DFCA82 /* SimilarSongFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarSongFinder.swift; sourceTree = "<group>"; };
 		087587EF2BB5055E00DFCA82 /* MyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibrary.swift; sourceTree = "<group>"; };
+		087AEBB92BBBC8BB00394103 /* LiveFriendActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveFriendActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		087AEBBB2BBBC8BB00394103 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		087AEBBD2BBBC8BB00394103 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		087AEBC02BBBC8BB00394103 /* LiveFriendActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFriendActivityBundle.swift; sourceTree = "<group>"; };
+		087AEBC22BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFriendActivityLiveActivity.swift; sourceTree = "<group>"; };
+		087AEBC42BBBC8BB00394103 /* LiveFriendActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFriendActivity.swift; sourceTree = "<group>"; };
+		087AEBC62BBBC8BB00394103 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		087AEBC82BBBC8BD00394103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		087AEBCA2BBBC8BD00394103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
@@ -69,18 +114,31 @@
 		08FFD2FE2BBA3F67008DFA7D /* LoungeMostPlayed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoungeMostPlayed.swift; sourceTree = "<group>"; };
 		08FFD3002BBA483D008DFA7D /* LoungeHopBackIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoungeHopBackIn.swift; sourceTree = "<group>"; };
 		08FFD3022BBA5D33008DFA7D /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		08FFD3082BBB060E008DFA7D /* View+ReceiveTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ReceiveTimer.swift"; sourceTree = "<group>"; };
+		08FFD3092BBB060F008DFA7D /* ACarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACarousel.swift; sourceTree = "<group>"; };
+		08FFD30A2BBB060F008DFA7D /* ACarouselAutoScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACarouselAutoScroll.swift; sourceTree = "<group>"; };
+		08FFD30B2BBB060F008DFA7D /* ACarouselViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACarouselViewModel.swift; sourceTree = "<group>"; };
+		08FFD30C2BBB060F008DFA7D /* AppLifeCycleModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifeCycleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		087AEBB62BBBC8BB00394103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087AEBBE2BBBC8BB00394103 /* SwiftUI.framework in Frameworks */,
+				087AEBBC2BBBC8BB00394103 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08EC0E922BB3896F00E4F592 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				081F80F02BB5F72100D0D723 /* ViewExtractor in Frameworks */,
 				081F80EE2BB5F70E00D0D723 /* SteadmanUI in Frameworks */,
-				08FFD2ED2BB8A1EF008DFA7D /* SpotifyAPI in Frameworks */,
+				08FFD3142BBB4B3C008DFA7D /* SpotifyAPI in Frameworks */,
 				081F80F22BB5F72800D0D723 /* SwiftSoup in Frameworks */,
-				08FFD3062BBB02C9008DFA7D /* ACarousel in Frameworks */,
 				08FFD2F42BB8B827008DFA7D /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +166,28 @@
 			path = "Navigation Views";
 			sourceTree = "<group>";
 		};
+		087AEBBA2BBBC8BB00394103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				087AEBBB2BBBC8BB00394103 /* WidgetKit.framework */,
+				087AEBBD2BBBC8BB00394103 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		087AEBBF2BBBC8BB00394103 /* LiveFriendActivity */ = {
+			isa = PBXGroup;
+			children = (
+				087AEBC02BBBC8BB00394103 /* LiveFriendActivityBundle.swift */,
+				087AEBC22BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift */,
+				087AEBC42BBBC8BB00394103 /* LiveFriendActivity.swift */,
+				087AEBC62BBBC8BB00394103 /* AppIntent.swift */,
+				087AEBC82BBBC8BD00394103 /* Assets.xcassets */,
+				087AEBCA2BBBC8BD00394103 /* Info.plist */,
+			);
+			path = LiveFriendActivity;
+			sourceTree = "<group>";
+		};
 		087C558A2BB3B88300F45562 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				08EC0E972BB3896F00E4F592 /* Lotus */,
+				087AEBBF2BBBC8BB00394103 /* LiveFriendActivity */,
+				087AEBBA2BBBC8BB00394103 /* Frameworks */,
 				08EC0E962BB3896F00E4F592 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				08EC0E952BB3896F00E4F592 /* Lotus.app */,
+				087AEBB92BBBC8BB00394103 /* LiveFriendActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +218,7 @@
 		08EC0E972BB3896F00E4F592 /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				08FFD3072BBB05FB008DFA7D /* Carousel */,
 				08FFD2FB2BBA3E8D008DFA7D /* Lounge Views */,
 				081F80FE2BB6096900D0D723 /* Info.plist */,
 				081F80F52BB608F500D0D723 /* Fonts */,
@@ -170,9 +254,38 @@
 			path = "Lounge Views";
 			sourceTree = "<group>";
 		};
+		08FFD3072BBB05FB008DFA7D /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				08FFD3092BBB060F008DFA7D /* ACarousel.swift */,
+				08FFD30A2BBB060F008DFA7D /* ACarouselAutoScroll.swift */,
+				08FFD30B2BBB060F008DFA7D /* ACarouselViewModel.swift */,
+				08FFD30C2BBB060F008DFA7D /* AppLifeCycleModifier.swift */,
+				08FFD3082BBB060E008DFA7D /* View+ReceiveTimer.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		087AEBB82BBBC8BB00394103 /* LiveFriendActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 087AEBCE2BBBC8BD00394103 /* Build configuration list for PBXNativeTarget "LiveFriendActivityExtension" */;
+			buildPhases = (
+				087AEBB52BBBC8BB00394103 /* Sources */,
+				087AEBB62BBBC8BB00394103 /* Frameworks */,
+				087AEBB72BBBC8BB00394103 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveFriendActivityExtension;
+			productName = LiveFriendActivityExtension;
+			productReference = 087AEBB92BBBC8BB00394103 /* LiveFriendActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		08EC0E942BB3896F00E4F592 /* Lotus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08EC0EA62BB3897000E4F592 /* Build configuration list for PBXNativeTarget "Lotus" */;
@@ -180,19 +293,20 @@
 				08EC0E912BB3896F00E4F592 /* Sources */,
 				08EC0E922BB3896F00E4F592 /* Frameworks */,
 				08EC0E932BB3896F00E4F592 /* Resources */,
+				087AEBD12BBBC8BD00394103 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				087AEBCC2BBBC8BD00394103 /* PBXTargetDependency */,
 			);
 			name = Lotus;
 			packageProductDependencies = (
 				081F80ED2BB5F70E00D0D723 /* SteadmanUI */,
 				081F80EF2BB5F72100D0D723 /* ViewExtractor */,
 				081F80F12BB5F72800D0D723 /* SwiftSoup */,
-				08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */,
 				08FFD2F32BB8B827008DFA7D /* KeychainAccess */,
-				08FFD3052BBB02C9008DFA7D /* ACarousel */,
+				08FFD3132BBB4B3C008DFA7D /* SpotifyAPI */,
 			);
 			productName = Lotus;
 			productReference = 08EC0E952BB3896F00E4F592 /* Lotus.app */;
@@ -208,6 +322,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					087AEBB82BBBC8BB00394103 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					08EC0E942BB3896F00E4F592 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -226,20 +343,28 @@
 				087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */,
 				087C558F2BB3B98000F45562 /* XCRemoteSwiftPackageReference "ViewExtractor" */,
 				087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
 				08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				08FFD3042BBB02C9008DFA7D /* XCRemoteSwiftPackageReference "ACarousel" */,
+				08FFD3122BBB4B3C008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
 			);
 			productRefGroup = 08EC0E962BB3896F00E4F592 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				08EC0E942BB3896F00E4F592 /* Lotus */,
+				087AEBB82BBBC8BB00394103 /* LiveFriendActivityExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		087AEBB72BBBC8BB00394103 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087AEBC92BBBC8BD00394103 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08EC0E932BB3896F00E4F592 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +381,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		087AEBB52BBBC8BB00394103 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087AEBC12BBBC8BB00394103 /* LiveFriendActivityBundle.swift in Sources */,
+				087AEBC72BBBC8BB00394103 /* AppIntent.swift in Sources */,
+				087AEBC32BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift in Sources */,
+				087AEBC52BBBC8BB00394103 /* LiveFriendActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08EC0E912BB3896F00E4F592 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,9 +404,12 @@
 				087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */,
 				087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */,
 				08FFD2FF2BBA3F67008DFA7D /* LoungeMostPlayed.swift in Sources */,
+				08FFD30D2BBB060F008DFA7D /* View+ReceiveTimer.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
 				08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */,
+				08FFD3102BBB060F008DFA7D /* ACarouselViewModel.swift in Sources */,
 				087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */,
+				08FFD3112BBB060F008DFA7D /* AppLifeCycleModifier.swift in Sources */,
 				08FFD2FA2BB9F3EB008DFA7D /* ExpandingText.swift in Sources */,
 				081F80F42BB6088900D0D723 /* Extensions.swift in Sources */,
 				08EC0EAA2BB3899600E4F592 /* OpenSpotifyAPI.swift in Sources */,
@@ -278,13 +417,82 @@
 				087587E52BB4989000DFCA82 /* Home.swift in Sources */,
 				08FFD2FD2BBA3E9D008DFA7D /* LoungeGreeting.swift in Sources */,
 				087587F02BB5055E00DFCA82 /* MyLibrary.swift in Sources */,
+				08FFD30E2BBB060F008DFA7D /* ACarousel.swift in Sources */,
 				08FFD3012BBA483D008DFA7D /* LoungeHopBackIn.swift in Sources */,
+				08FFD30F2BBB060F008DFA7D /* ACarouselAutoScroll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		087AEBCC2BBBC8BD00394103 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 087AEBB82BBBC8BB00394103 /* LiveFriendActivityExtension */;
+			targetProxy = 087AEBCB2BBBC8BD00394103 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		087AEBCF2BBBC8BD00394103 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 925J898556;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveFriendActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveFriendActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spence.Lotus.LiveFriendActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		087AEBD02BBBC8BD00394103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 925J898556;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveFriendActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveFriendActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spence.Lotus.LiveFriendActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		08EC0EA42BB3897000E4F592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,6 +610,7 @@
 		08EC0EA72BB3897000E4F592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
@@ -443,6 +652,7 @@
 		08EC0EA82BB3897000E4F592 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
@@ -484,6 +694,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		087AEBCE2BBBC8BD00394103 /* Build configuration list for PBXNativeTarget "LiveFriendActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				087AEBCF2BBBC8BD00394103 /* Debug */,
+				087AEBD02BBBC8BD00394103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		08EC0E902BB3896F00E4F592 /* Build configuration list for PBXProject "Lotus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -529,14 +748,6 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.4;
-			};
-		};
 		08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -545,12 +756,12 @@
 				kind = branch;
 			};
 		};
-		08FFD3042BBB02C9008DFA7D /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+		08FFD3122BBB4B3C008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			repositoryURL = "https://github.com/steadman1/SpotifyAPI.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -571,20 +782,15 @@
 			package = 087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
 		};
-		08FFD2EC2BB8A1EF008DFA7D /* SpotifyAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08FFD2EB2BB8A1EF008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
-			productName = SpotifyAPI;
-		};
 		08FFD2F32BB8B827008DFA7D /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08FFD2F22BB8B827008DFA7D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
-		08FFD3052BBB02C9008DFA7D /* ACarousel */ = {
+		08FFD3132BBB4B3C008DFA7D /* SpotifyAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 08FFD3042BBB02C9008DFA7D /* XCRemoteSwiftPackageReference "ACarousel" */;
-			productName = ACarousel;
+			package = 08FFD3122BBB4B3C008DFA7D /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
+			productName = SpotifyAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -58,6 +58,8 @@ struct Home: View {
         //.onAppear { printSystemFonts() }
         //.onAppear { handleStored_sp_dc() }
         .onAppear {
+            //try? self.spotify.keychain.remove(self.spotify.authorizationManagerKey)
+            
             self.authorizationURL = spotify.fetchAuthorizationURL()
             handleRefreshAuthorization(!spotify.api.authorizationManager.isAuthorized())
         }
@@ -66,8 +68,8 @@ struct Home: View {
     
     private func calculateNavBarPadding() -> CGFloat {
         let text = "Library"
-        let padding = text.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!) +
-            text.heightOfString(usingFont: UIFont(name: "Newake", size: 98)!) + Screen.padding
+        let padding = text.heightOfString(usingFont: Font.uiSerifBody) +
+        text.heightOfString(usingFont: Font.uiSerifHeader) + Screen.padding
         
         return padding
     }
@@ -87,6 +89,7 @@ struct Home: View {
     func handleAuthorizationURLWithQuery(_ url: URL) {
         // **Always** validate URLs; they offer a potential attack vector into
         // your app.
+        
         guard url.scheme == self.spotify.loginCallbackURL.scheme else {
             print("not handling URL: unexpected scheme: '\(url)'")
             self.alert = AlertItem(
@@ -137,8 +140,7 @@ struct Home: View {
                     alertMessage = ""
                 }
                 else {
-                    alertTitle =
-                        "Couldn't Authorization With Your Account"
+                    alertTitle = "Couldn't Authorize With Your Account"
                     alertMessage = error.localizedDescription
                 }
                 self.alert = AlertItem(

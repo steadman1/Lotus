@@ -44,8 +44,8 @@ public struct WithNavBarPadding: ViewModifier {
     
     private func calculateNavBarPadding() -> CGFloat {
         let text = "Library"
-        let padding = text.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!) +
-            text.heightOfString(usingFont: UIFont(name: "Newake", size: 98)!) + Screen.padding
+        let padding = text.heightOfString(usingFont: Font.uiSerifBody) +
+            text.heightOfString(usingFont: Font.uiSansNavigation) + Screen.padding
         
         return padding
     }

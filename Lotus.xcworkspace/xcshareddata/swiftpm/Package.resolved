@@ -1,15 +1,6 @@
 {
-  "originHash" : "228cc8d52db76a9d24c284338ba58ed2f4c7d2704c69759d678fea200031064b",
+  "originHash" : "242910b281e28cae0737f29837b7048b6cba642bc63cab942ee683873db13332",
   "pins" : [
-    {
-      "identity" : "acarousel",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JWAutumn/ACarousel",
-      "state" : {
-        "revision" : "8a322513580f21288fd87eb3a1341c247b3e2a76",
-        "version" : "0.2.0"
-      }
-    },
     {
       "identity" : "keychainaccess",
       "kind" : "remoteSourceControl",
@@ -40,10 +31,10 @@
     {
       "identity" : "spotifyapi",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Peter-Schorn/SpotifyAPI.git",
+      "location" : "https://github.com/steadman1/SpotifyAPI.git",
       "state" : {
-        "revision" : "74c3e42ebd983ecf3ceaef65786c72f971495003",
-        "version" : "2.2.4"
+        "branch" : "master",
+        "revision" : "ed8e8f68722fc44d8d4e8a2b74746cc601c9e821"
       }
     },
     {

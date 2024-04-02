@@ -19,8 +19,8 @@ struct ExpandingText: View {
     init(_ text: String, font: Font = .sansNavigationHeader) {
         self.text = text
         self.font = font
-        self.textSize = CGSize(width: text.widthOfString(usingFont: UIFont(name: "Newake", size: 98)!),
-                               height: text.heightOfString(usingFont: UIFont(name: "Newake", size: 98)!))
+        self.textSize = CGSize(width: text.widthOfString(usingFont: Font.uiSansNavigationHeader),
+                               height: text.heightOfString(usingFont: Font.uiSansNavigationHeader))
     }
     
     var body: some View {

@@ -31,8 +31,8 @@ public struct NavigationItem: View {
         self.icon = from
         self.activeIcon = to
         self.width = width
-        self.textSize = CGSize(width: name.widthOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!),
-                               height: name.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!))
+        self.textSize = CGSize(width: name.widthOfString(usingFont: Font.uiSerifBody),
+                               height: name.heightOfString(usingFont: Font.uiSerifBody))
     }
     
     public var body: some View {
@@ -141,7 +141,7 @@ public struct CustomNavigationBar<Content: View>: View {
     private var navigationBarOverlay: some View {
         let height = NavigationBar.iconHeight + Screen.padding * 3 // 2 + 1 to account for the name of each nav item
         return ZStack(alignment: .bottom) {
-            let shadowHeight = items[bar.selectionIndex].name.heightOfString(usingFont: UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!) + Screen.padding * 2
+            let shadowHeight = items[bar.selectionIndex].name.heightOfString(usingFont: Font.uiSerifBody) + Screen.padding * 2
             
             VStack(spacing: 0) {
                 ZStack(alignment: .bottom) {
