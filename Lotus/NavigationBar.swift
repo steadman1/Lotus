@@ -129,13 +129,27 @@ public struct CustomNavigationBar<Content: View>: View {
     }
 
     public var body: some View {
-        content
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .overlay(
-                navigationBarOverlay,
-                alignment: .bottom
-            )
-            
+        Extract(content) { views in
+        // ^ from https://github.com/GeorgeElsham/ViewExtractor
+            VStack {
+                ForEach(Array(zip(views.indices, views)), id: \.0) { index, view in
+                    if bar.selectionIndex == index {
+                        view
+                            
+                    }
+                }
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                .overlay(
+                    navigationBarOverlay
+                        .padding(.bottom, screen.safeAreaInsets.bottom),
+                    alignment: .bottom
+                ).safeAreaInset(edge: .top) {
+                    Rectangle()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: screen.safeAreaInsets.top)
+                        .foregroundStyle(Color.background)
+                }.ignoresSafeArea()
+        }
     }
 
     private var navigationBarOverlay: some View {

@@ -1,24 +1,19 @@
 //
-//  FriendActivity.swift
+//  Search.swift
 //  Lotus
 //
-//  Created by Spencer Steadman on 3/27/24.
+//  Created by Spencer Steadman on 4/2/24.
 //
 
 import SwiftUI
 import SteadmanUI
 
-struct FriendActivity: View {
-    @State var friendActivity: SpotifyFriendActivity?
-    
-    let openSpotifyAPI = OpenSpotifyAPI.shared
-    let spotifyWebAPI = SpotifyWebAPI_.shared
-    
+struct Search: View {
     var body: some View {
         ScrollView {
             Spacer().frame(height: Screen.padding)
             Extract {
-                FriendActivityGreeting()
+                SearchGreeting()
                     .alignLeft()
             } views: { views in
                 ForEach(Array(zip(views.indices, views)), id: \.0) { index, content in
@@ -30,11 +25,6 @@ struct FriendActivity: View {
                 }
             }.withNavBarTheEnd()
             
-        }.onAppear {
-            openSpotifyAPI.getFriendActivity() { friendActivity in
-                
-                self.friendActivity = friendActivity
-            }
         }
     }
 }

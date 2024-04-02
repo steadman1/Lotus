@@ -30,29 +30,9 @@ struct ContentView: View {
     var body: some View {
         CustomNavigationBar(items: navigationItems) {
             Home()
+            FriendActivity()
+            Search()
+            Library()
         }
-    }
-}
-
-public struct WithNavBarPadding: ViewModifier {
-    public func body(content: Content) -> some View {
-        VStack {
-            content
-            Spacer().frame(height: calculateNavBarPadding())
-        }
-    }
-    
-    private func calculateNavBarPadding() -> CGFloat {
-        let text = "Library"
-        let padding = text.heightOfString(usingFont: Font.uiSerifBody) +
-            text.heightOfString(usingFont: Font.uiSansNavigation) + Screen.padding
-        
-        return padding
-    }
-}
-
-extension View {
-    func withNavBarPadding() -> some View {
-        self.modifier(WithNavBarPadding())
     }
 }

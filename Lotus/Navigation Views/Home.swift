@@ -27,19 +27,27 @@ struct Home: View {
     private let friendActivityHeight: CGFloat = 80
     private let stickyHeaderHeight: CGFloat = 60
     
+    
+    
     var body: some View {
         ScrollView {
             Spacer().frame(height: Screen.padding)
-            VStack(alignment: .leading) {
+            Extract {
                 LoungeGreeting()
                     .alignLeft()
                 
                 LoungeMostPlayed()
                 
                 LoungeHopBackIn()
-            }.withNavBarPadding()
-                .withNavBarPadding()
-                .withNavBarPadding()
+            } views: { views in
+                ForEach(Array(zip(views.indices, views)), id: \.0) { index, content in
+                    content
+                    
+                    if index < views.count - 1 {
+                        Divider()
+                    }
+                }
+            }.withNavBarTheEnd()
             
         }
         .alert(item: $alert) { alert in

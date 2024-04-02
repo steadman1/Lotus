@@ -31,7 +31,7 @@ extension ACarouselAutoScroll {
     
     /// default active
     public static var defaultActive: Self {
-        return .active(5)
+        return .active(10)
     }
     
     /// Is the view auto-scrolling

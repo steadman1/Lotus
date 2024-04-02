@@ -1,5 +1,5 @@
 //
-//  FriendActivity.swift
+//  MyLibrary.swift
 //  Lotus
 //
 //  Created by Spencer Steadman on 3/27/24.
@@ -8,17 +8,12 @@
 import SwiftUI
 import SteadmanUI
 
-struct FriendActivity: View {
-    @State var friendActivity: SpotifyFriendActivity?
-    
-    let openSpotifyAPI = OpenSpotifyAPI.shared
-    let spotifyWebAPI = SpotifyWebAPI_.shared
-    
+struct Library: View {
     var body: some View {
         ScrollView {
             Spacer().frame(height: Screen.padding)
             Extract {
-                FriendActivityGreeting()
+                LibraryGreeting()
                     .alignLeft()
             } views: { views in
                 ForEach(Array(zip(views.indices, views)), id: \.0) { index, content in
@@ -30,11 +25,6 @@ struct FriendActivity: View {
                 }
             }.withNavBarTheEnd()
             
-        }.onAppear {
-            openSpotifyAPI.getFriendActivity() { friendActivity in
-                
-                self.friendActivity = friendActivity
-            }
         }
     }
 }
