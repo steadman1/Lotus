@@ -40,6 +40,7 @@ final class Spotify: ObservableObject {
     /// The key in the keychain that is used to store the authorization
     /// information: "authorizationManager".
     let authorizationManagerKey = "authorizationManager"
+    let sp_dcKey = "sp_dc"
     
     /// The URL that Spotify will redirect to after the user either authorizes
     /// or denies authorization for your application.
@@ -73,6 +74,8 @@ final class Spotify: ObservableObject {
      */
     @Published var isAuthorized = false
     
+    @Published var has_sp_dc = false
+    
     /// If `true`, then the app is retrieving access and refresh tokens. Used by
     /// `LoginView` to present an activity indicator.
     @Published var isRetrievingTokens = false
@@ -90,6 +93,8 @@ final class Spotify: ObservableObject {
             clientSecret: Spotify.clientSecret
         )
     )
+    
+    let open_api = OpenSpotifyAPI()
     
     var cancellables: Set<AnyCancellable> = []
     
@@ -154,6 +159,30 @@ final class Spotify: ObservableObject {
             print("did NOT find authorization information in keychain")
         }
         
+        if let sp_dc = keychain[string: self.sp_dcKey] {
+            
+            print("found sp_dc cookie in keychain")
+            
+            /*
+             This assignment causes `authorizationManagerDidChange` to emit
+             a signal, meaning that `authorizationManagerDidChange()` will
+             be called.
+
+             Note that if you had subscribed to
+             `authorizationManagerDidChange` after this line, then
+             `authorizationManagerDidChange()` would not have been called
+             and the @Published `isAuthorized` property would not have been
+             properly updated.
+
+             We do not need to update `isAuthorized` here because it is
+             already done in `authorizationManagerDidChange()`.
+             */
+            self.has_sp_dc = true
+            self.open_api.authenticate(spDcCookie: sp_dc)
+        }
+        else {
+            print("did NOT find sp_dc cookie in keychain")
+        }
     }
     
     /**
@@ -190,6 +219,11 @@ final class Spotify: ObservableObject {
         }
         
         return url
+    }
+    
+    func authenticateOpenAPI(with sp_dc: String) {
+        self.keychain[string: self.sp_dcKey] = sp_dc
+        self.open_api.authenticate(spDcCookie: sp_dc)
     }
     
     /**

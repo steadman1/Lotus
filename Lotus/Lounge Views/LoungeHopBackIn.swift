@@ -38,9 +38,8 @@ struct LoungeHopBackIn: View {
     func fetchAndSetRecentPlaylists() {
         spotify.api.currentUserPlaylists(limit: 12)
             .sink { completion in
-                print(completion)
+                // print(completion)
             } receiveValue: { results in
-                print(results)
                 self.playlists = results.items
             }.store(in: &cancellables)
     }
@@ -55,7 +54,7 @@ struct PlaylistCarousel: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            ACarousel(items, itemWidth: itemSize, spacing: 0, headspace: 0) { item in
+            ACarousel(items, itemWidth: itemSize, spacing: 0, headspace: 0) { _, _, item in
                 VStack(spacing: Screen.halfPadding) {
                     AsyncImage(url: item.images.first?.url) { phase in
                         ZStack {
@@ -108,7 +107,7 @@ struct BlankCarousel: View {
     
     var body: some View {
         VStack {
-            ACarousel(blankItems, itemWidth: itemSize, spacing: 0, headspace: 0) { item in
+            ACarousel(blankItems, itemWidth: itemSize, spacing: 0, headspace: 0) { _, _, item in
                 VStack(spacing: Screen.halfPadding) {
                     Rectangle()
                         .foregroundStyle(Color.foreground)

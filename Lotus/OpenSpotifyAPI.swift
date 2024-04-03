@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import KeychainAccess
 
 // Define a structure for decoding the access token JSON response
 struct AccessToken: Decodable {
@@ -104,7 +105,7 @@ class OpenSpotifyAPI: ObservableObject {
         DispatchQueue.main.async { self.isAuthenticated = .success }
     }
     
-    func getFriendActivity(completion: @escaping (SpotifyFriendActivity?) -> Void) {
+    func fetchFriendActivity(completion: @escaping (SpotifyFriendActivity?) -> Void) {
         guard let url = URL(string: "https://spclient.wg.spotify.com/presence-view/v1/buddylist"), let accessToken = self.accessToken else {
             return
         }

@@ -31,6 +31,8 @@
 		087AEBD82BBCC7B900394103 /* FriendActivityGreeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBD72BBCC7B900394103 /* FriendActivityGreeting.swift */; };
 		087AEBDE2BBCCE2E00394103 /* SearchGreeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBDD2BBCCE2E00394103 /* SearchGreeting.swift */; };
 		087AEBE02BBCCE5500394103 /* LibraryGreeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBDF2BBCCE5500394103 /* LibraryGreeting.swift */; };
+		087AEBE22BBCF85000394103 /* FriendActivityCurrentlyListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */; };
+		087AEBE42BBCFF0700394103 /* RefreshAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBE32BBCFF0700394103 /* RefreshAuthorization.swift */; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
@@ -104,6 +106,8 @@
 		087AEBD72BBCC7B900394103 /* FriendActivityGreeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivityGreeting.swift; sourceTree = "<group>"; };
 		087AEBDD2BBCCE2E00394103 /* SearchGreeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGreeting.swift; sourceTree = "<group>"; };
 		087AEBDF2BBCCE5500394103 /* LibraryGreeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryGreeting.swift; sourceTree = "<group>"; };
+		087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivityCurrentlyListening.swift; sourceTree = "<group>"; };
+		087AEBE32BBCFF0700394103 /* RefreshAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAuthorization.swift; sourceTree = "<group>"; };
 		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				087AEBD72BBCC7B900394103 /* FriendActivityGreeting.swift */,
+				087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */,
 			);
 			path = FriendActivityViews;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */,
 				08EC0EAD2BB3908600E4F592 /* ObservableDefaults.swift */,
 				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
+				087AEBE32BBCFF0700394103 /* RefreshAuthorization.swift */,
 				08EC0E982BB3896F00E4F592 /* LotusApp.swift */,
 				08FFD2F02BB8B505008DFA7D /* Spotify.swift */,
 				08EC0E9A2BB3896F00E4F592 /* ContentView.swift */,
@@ -441,6 +447,7 @@
 				087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */,
 				08FFD2FF2BBA3F67008DFA7D /* LoungeMostPlayed.swift in Sources */,
 				08FFD30D2BBB060F008DFA7D /* View+ReceiveTimer.swift in Sources */,
+				087AEBE42BBCFF0700394103 /* RefreshAuthorization.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
 				08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */,
 				08FFD3102BBB060F008DFA7D /* ACarouselViewModel.swift in Sources */,
@@ -459,6 +466,7 @@
 				087AEBD52BBC8F3E00394103 /* Search.swift in Sources */,
 				087AEBDE2BBCCE2E00394103 /* SearchGreeting.swift in Sources */,
 				08FFD3012BBA483D008DFA7D /* LoungeHopBackIn.swift in Sources */,
+				087AEBE22BBCF85000394103 /* FriendActivityCurrentlyListening.swift in Sources */,
 				08FFD30F2BBB060F008DFA7D /* ACarouselAutoScroll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

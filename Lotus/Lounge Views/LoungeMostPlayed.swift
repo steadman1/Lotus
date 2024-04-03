@@ -81,7 +81,7 @@ struct LoungeMostPlayed: View {
         let fourteenDaysAgo = Calendar.current.date(byAdding: .day, value: -14, to: currentDate)!
         spotify.api.recentlyPlayed(.after(fourteenDaysAgo), limit: 50)
             .sink { completion in
-                print(completion)
+                // print(completion)
             } receiveValue: { results in
                 self.album = calculateMostFrequentAlbum(history: results.items)
             }.store(in: &cancellables)

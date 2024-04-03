@@ -26,7 +26,7 @@ public struct ACarousel<Data, ID, Content, ReturnView> : View where Data : Rando
     
     @ObservedObject
     private var viewModel: ACarouselViewModel<Data, ID>
-    private let content: (Data.Element) -> Content
+    private let content: (Int, CGFloat, Data.Element) -> Content
     private let returnView: ReturnView
     
     public var body: some View {
@@ -40,7 +40,8 @@ public struct ACarousel<Data, ID, Content, ReturnView> : View where Data : Rando
         HStack(alignment: .top, spacing: 0) {
             ForEach(Array(zip(0..<viewModel.data.count, viewModel.data)), id: \.0) { index, data in
                 let scale: CGFloat = viewModel.itemScaling(data)
-                content(data)
+                
+                content(index, viewModel.offset, data)
                     .frame(width: viewModel.itemWidth)
                     .scaleEffect(x: scale, y: scale, anchor: .top)
                     .offset(x: generateOffset(for: data, with: index))
@@ -106,7 +107,7 @@ extension ACarousel {
     ///   - autoScroll: A enum that define view to scroll automatically. See
     ///     ``ACarouselAutoScroll``. default is `inactive`.
     ///   - content: The view builder that creates views dynamically.
-    public init(_ data: Data, id: KeyPath<Data.Element, ID>, index: Binding<Int> = .constant(0), itemWidth: CGFloat = 80, spacing: CGFloat = 10, headspace: CGFloat = 10, sidesScaling: CGFloat = 0.7, isWrap: Bool = false, autoScroll: ACarouselAutoScroll = .defaultActive, canMove: Bool = true, @ViewBuilder content: @escaping (Data.Element) -> Content, @ViewBuilder returnView: @escaping () -> ReturnView) {
+    public init(_ data: Data, id: KeyPath<Data.Element, ID>, index: Binding<Int> = .constant(0), itemWidth: CGFloat = 80, spacing: CGFloat = 10, headspace: CGFloat = 10, sidesScaling: CGFloat = 0.7, isWrap: Bool = false, autoScroll: ACarouselAutoScroll = .defaultActive, canMove: Bool = true, @ViewBuilder content: @escaping (Int, CGFloat, Data.Element) -> Content, @ViewBuilder returnView: @escaping () -> ReturnView) {
         
         self.viewModel = ACarouselViewModel(data, id: id, index: index, itemWidth: itemWidth, spacing: spacing, headspace: headspace, sidesScaling: sidesScaling, isWrap: isWrap, autoScroll: autoScroll, canMove: canMove)
         self.content = content
@@ -133,7 +134,7 @@ extension ACarousel where ID == Data.Element.ID, Data.Element : Identifiable {
     ///   - autoScroll: A enum that define view to scroll automatically. See
     ///     ``ACarouselAutoScroll``. default is `inactive`.
     ///   - content: The view builder that creates views dynamically.
-    public init(_ data: Data, index: Binding<Int> = .constant(0), itemWidth: CGFloat = 80, spacing: CGFloat = 10, headspace: CGFloat = 10, sidesScaling: CGFloat = 0.7, isWrap: Bool = false, autoScroll: ACarouselAutoScroll = .defaultActive, canMove: Bool = true, @ViewBuilder content: @escaping (Data.Element) -> Content, @ViewBuilder returnView: @escaping () -> ReturnView) {
+    public init(_ data: Data, index: Binding<Int> = .constant(0), itemWidth: CGFloat = 80, spacing: CGFloat = 10, headspace: CGFloat = 10, sidesScaling: CGFloat = 0.7, isWrap: Bool = false, autoScroll: ACarouselAutoScroll = .defaultActive, canMove: Bool = true, @ViewBuilder content: @escaping (Int, CGFloat, Data.Element) -> Content, @ViewBuilder returnView: @escaping () -> ReturnView) {
         
         self.viewModel = ACarouselViewModel(data, index: index, itemWidth: itemWidth, spacing: spacing, headspace: headspace, sidesScaling: sidesScaling, isWrap: isWrap, autoScroll: autoScroll, canMove: canMove)
         self.content = content

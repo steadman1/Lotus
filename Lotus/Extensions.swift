@@ -76,6 +76,21 @@ extension String {
     }
 }
 
+extension URL {
+    func convertToHTTPS() -> URL {
+        // check if scheme is already https
+        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true), components.scheme != "https" else {
+            return self
+        }
+        
+        // Change the scheme to https
+        components.scheme = "https"
+        
+        // Return the new URL, or nil if there was an issue constructing it
+        return components.url!
+    }
+}
+
 public struct WithNavBarPadding: ViewModifier {
     
     let withTheEnd: Bool

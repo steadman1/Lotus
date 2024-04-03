@@ -9,8 +9,6 @@
 import SwiftUI
 import SteadmanUI
 
-import SwiftUI
-
 public struct NavigationItem: View {
     @Environment(\.index) private var index
     @Environment(\.itemCount) private var itemCount
@@ -22,15 +20,17 @@ public struct NavigationItem: View {
     public let icon: Image
     public let activeIcon: Image?
     public let width: CGFloat
+    public let state: NavigationPreviewState
     
     private let textSize: CGSize
     private let foregroundColor = Color.foreground
     
-    public init(name: String, from: Image, to: Image? = nil, width: CGFloat = 100) {
+    public init(name: String, from: Image, to: Image? = nil, width: CGFloat = 100, state: NavigationPreviewState = .name) {
         self.name = name
         self.icon = from
         self.activeIcon = to
         self.width = width
+        self.state = state
         self.textSize = CGSize(width: name.widthOfString(usingFont: Font.uiSerifBody),
                                height: name.heightOfString(usingFont: Font.uiSerifBody))
     }
@@ -40,14 +40,31 @@ public struct NavigationItem: View {
         let paddedHeight: CGFloat = textSize.height + Screen.padding
         ZStack {
             VStack {
-                Text(name)
-                    .frame(maxWidth: .infinity)
-                    .lineLimit(1)
-                    .opacity(isActive ? 0 : 1)
-                    .animation(.snappy.delay(isActive ? 0 : 0.25), value: bar.selectionIndex)
-                    .font(.serifNavigation)
-                    .foregroundStyle(Color.primaryText)
-            }.frame(width: paddedHeight * (animation) + paddedWidth * (1 - animation),
+                switch state {
+                case .name:
+                    Text(name)
+                        .frame(maxWidth: .infinity)
+                        .lineLimit(1)
+                        .opacity(isActive ? 0 : 1)
+                        .animation(.snappy.delay(isActive ? 0 : 0.25), value: bar.selectionIndex)
+                        .font(.serifNavigation)
+                        .foregroundStyle(Color.primaryText)
+                case .icon:
+                    if activeIcon != nil && isActive {
+                        activeIcon
+                            .animation(.snappy.delay(isActive ? 0 : 0.25), value: bar.selectionIndex)
+                            .font(.serifNavigation)
+                            .foregroundStyle(Color.primaryText)
+                    } else {
+                        icon
+                            .animation(.snappy.delay(isActive ? 0 : 0.25), value: bar.selectionIndex)
+                            .font(.serifNavigation)
+                            .foregroundStyle(Color.primaryText)
+                    }
+                case .none:
+                    EmptyView()
+                }
+            }.frame(width: state == .name ? paddedHeight * (animation) + paddedWidth * (1 - animation) : paddedHeight,
                     height: paddedHeight)
                 .background(isActive ? Color.foreground : Color.background)
                 .clipShape(RoundedRectangle(cornerRadius: 100))
@@ -92,6 +109,10 @@ public struct NavigationItem: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             bar.isChangeable = true
         }
+    }
+    
+    public enum NavigationPreviewState {
+        case name, icon, none
     }
 }
 

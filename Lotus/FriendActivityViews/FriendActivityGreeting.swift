@@ -11,6 +11,7 @@ import SteadmanUI
 struct FriendActivityGreeting: View {
     @EnvironmentObject var screen: Screen
     
+    private let openSpotifyAPI = OpenSpotifyAPI.shared
     private let text = "Currently\nListening"
     
     var body: some View {
