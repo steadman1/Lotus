@@ -49,8 +49,10 @@ struct Home: View {
         .sheet(isPresented: $refreshAuthorization) {
             RefreshAuthorization()
         }
+
         .onChange(of: spotify.isAuthorized) { print("test"); refreshID = UUID() }
         .onAppear {
+            printSystemFonts()
             // try? self.spotify.keychain.remove(self.spotify.authorizationManagerKey)
             handleRefreshAuthorization(!spotify.api.authorizationManager.isAuthorized())
         }

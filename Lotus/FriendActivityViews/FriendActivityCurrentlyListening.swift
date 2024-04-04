@@ -12,26 +12,22 @@ import Combine
 struct FriendActivityCurrentlyListening: View {
     @EnvironmentObject var screen: Screen
     @EnvironmentObject var defaults: ObservableDefaults
-    @EnvironmentObject var spotify: Spotify
     
-    @State var friendActivity: SpotifyFriendActivity? = nil
+    @Binding var friendActivity: SpotifyFriendActivity?
     
     private let itemSize: CGFloat = 160
+    private let xMinutesAgo: Int64 = Int64(Date().advanced(by: TimeInterval(-8 * 60)).timeIntervalSince1970) * 1000
     
     var body: some View {
+        let activeFriends = friendActivity?.friends.filter({ $0.timestamp > xMinutesAgo }) ?? []
         VStack {
-            if friendActivity != nil && !friendActivity!.friends.isEmpty {
-                FriendActivityCarousel(items: friendActivity!.friends, itemSize: itemSize)
+            if friendActivity != nil && !activeFriends.isEmpty {
+                FriendActivityCarousel(friendActivity: $friendActivity, activeFriends: activeFriends, itemSize: itemSize)
             } else {
                 BlankCarousel(itemSize: itemSize)
             }
             
         }.padding(.vertical, Screen.padding)
-        .onAppear {
-            spotify.open_api.fetchFriendActivity { result in
-                self.friendActivity = result
-            }
-        }
     }
 }
 
@@ -39,28 +35,33 @@ struct FriendActivityCarousel: View {
     @EnvironmentObject var screen: Screen
     @EnvironmentObject var spotify: Spotify
     
+    @Binding var friendActivity: SpotifyFriendActivity?
+    
     @State var offset: CGFloat = 0
     @State var imageURLs: [URL?]
     @State var cancellables = Set<AnyCancellable>()
     
-    let items: [Friend]
+    let activeFriends: [Friend]
     let itemSize: CGFloat
     
     private let returnButtonSize: CGFloat = 48
     private let profileSize: CGFloat = 32
     
-    init(items: [Friend], itemSize: CGFloat) {
-        self.items = items
+    init(friendActivity: Binding<SpotifyFriendActivity?>, activeFriends: [Friend], itemSize: CGFloat) {
+        self._friendActivity = friendActivity
+        self.activeFriends = activeFriends
         self.itemSize = itemSize
-        self._imageURLs = State(initialValue: Array(repeating: nil, count: items.count))
+        self._imageURLs = State(initialValue: Array(repeating: nil, count: friendActivity.wrappedValue!.friends.count))
     }
     
     var body: some View {
-        let cardHeight: CGFloat = itemSize + Screen.halfPadding * 5 + profileSize
+        let cardHeight: CGFloat = itemSize + Screen.halfPadding * 3 + profileSize
             + "|\n|".heightOfString(usingFont: Font.uiSansBody)
             + "|".heightOfString(usingFont: Font.uiSerifBody)
         VStack {
-            ACarousel(items, itemWidth: itemSize, spacing: 0, headspace: 0) { index, offset, item in
+            ACarousel(friendActivity!.friends.sorted(by: { $0.timestamp > $1.timestamp }),
+                      itemWidth: itemSize, spacing: 0, headspace: 0) { index, offset, item in
+                
                 VStack(spacing: Screen.halfPadding) {
                     ZStack(alignment: .topLeading) {
                         AsyncImage(url: item.track.imageUrl.convertToHTTPS()) { phase in
@@ -122,7 +123,7 @@ struct FriendActivityCarousel: View {
                             .lineLimit(1)
                             .font(.serifBody)
                     }.padding(.horizontal, Screen.halfPadding / 2)
-                }//.onChange(of: offset) { self.offset = $1 }
+                }.onChange(of: offset) { self.offset = $1 }
                     .onAppear {
                         fetchAndAddUserProfileURL(with: item.user.uri, at: index)
                     }

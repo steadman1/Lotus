@@ -5,10 +5,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>com.spence.Lotus</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.spence.Lotus</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>lotus-for-spotify</string>
@@ -21,6 +21,8 @@
 		<string>Times New Roman Condensed Italic.otf</string>
 		<string>Times New Roman Condensed Bold.otf</string>
 		<string>Newake.otf</string>
+		<string>SF Pro Display.otf</string>
+		<string>SF Compact Display.otf</string>
 	</array>
 </dict>
 </plist>

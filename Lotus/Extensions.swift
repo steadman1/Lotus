@@ -9,6 +9,30 @@ import SwiftUI
 import SteadmanUI
 
 extension Font {
+    static var sfProDisplayCaption: Font {
+        Font.custom("SF Compact Display", size: 10)
+            .weight(.medium)
+    }
+    static var uiSFProDisplayCaption: UIFont {
+        UIFont(name: "SFCompactDisplay-Medium", size: 10)!
+    }
+    
+    static var sfProDisplayBody: Font {
+        Font.custom("SF Pro Display", size: 16)
+            .weight(.regular)
+    }
+    static var uiSFProDisplayBody: UIFont {
+        UIFont(name: "SFProDisplay-Medium", size: 16)!
+    }
+    
+    static var sfProDisplayTitle: Font {
+        Font.custom("SF Pro Display", size: 20)
+            .weight(.bold)
+    }
+    static var uiSFProDisplayTitle: UIFont {
+        UIFont(name: "SFProDisplay-Medium", size: 20)!
+    }
+    
     // Serif Header Fonts
     static var serifHeader: Font {
         Font.custom("TimesNewRomanMTStd-Cond", size: 44)
@@ -34,6 +58,23 @@ extension Font {
     }
     static var uiSerifBody: UIFont {
         UIFont(name: "TimesNewRomanMTStd-Cond", size: 18)!
+    }
+    
+    // Serif Body Fonts
+    static var serifCaption: Font {
+        Font.custom("TimesNewRomanMTStd-Cond", size: 14)
+            .weight(.regular)
+    }
+    static var uiSerifCaption: UIFont {
+        UIFont(name: "TimesNewRomanMTStd-Cond", size: 14)!
+    }
+    
+    // Sans Body Fonts
+    static var sansSubtitle: Font {
+        Font.custom("Newake", size: 24)
+    }
+    static var uiSansSubtitle: UIFont {
+        UIFont(name: "Newake", size: 24)!
     }
     
     // Sans Body Fonts
@@ -73,6 +114,29 @@ extension String {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.height
+    }
+}
+
+extension Date {
+    func timeAgo() -> String {
+        let now = Date()
+        let difference = Calendar.current.dateComponents([.minute, .hour, .day, .weekOfYear, .month, .year], from: self, to: now)
+        
+        if let year = difference.year, year > 0 {
+            return "\(year)y ago"
+        } else if let month = difference.month, month > 0 {
+            return "\(month)mo ago"
+        } else if let week = difference.weekOfYear, week > 0 {
+            return "\(week)w ago"
+        } else if let day = difference.day, day > 0 {
+            return "\(day)d ago"
+        } else if let hour = difference.hour, hour > 0 {
+            return "\(hour)hr ago"
+        } else if let minute = difference.minute, minute > 8 {
+            return "\(minute)m ago"
+        } else {
+            return "Now"
+        }
     }
 }
 

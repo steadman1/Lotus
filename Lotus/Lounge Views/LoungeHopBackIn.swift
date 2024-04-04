@@ -107,7 +107,7 @@ struct BlankCarousel: View {
     
     var body: some View {
         VStack {
-            ACarousel(blankItems, itemWidth: itemSize, spacing: 0, headspace: 0) { _, _, item in
+            ACarousel(blankItems, itemWidth: itemSize, spacing: 0, headspace: 0, autoScroll: .inactive) { _, _, item in
                 VStack(spacing: Screen.halfPadding) {
                     Rectangle()
                         .foregroundStyle(Color.foreground)

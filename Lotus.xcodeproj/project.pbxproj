@@ -33,6 +33,19 @@
 		087AEBE02BBCCE5500394103 /* LibraryGreeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBDF2BBCCE5500394103 /* LibraryGreeting.swift */; };
 		087AEBE22BBCF85000394103 /* FriendActivityCurrentlyListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */; };
 		087AEBE42BBCFF0700394103 /* RefreshAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBE32BBCFF0700394103 /* RefreshAuthorization.swift */; };
+		087AEBE62BBD8BB400394103 /* FriendActivityYourFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBE52BBD8BB400394103 /* FriendActivityYourFriends.swift */; };
+		087AEBED2BBE280A00394103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC0E9E2BB3897000E4F592 /* Assets.xcassets */; };
+		087AEBEF2BBE281600394103 /* SteadmanUI in Frameworks */ = {isa = PBXBuildFile; productRef = 087AEBEE2BBE281600394103 /* SteadmanUI */; };
+		087AEBF02BBE282E00394103 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081F80F32BB6088900D0D723 /* Extensions.swift */; };
+		087AEBF22BBE2A9500394103 /* SF Compact Display.otf in Resources */ = {isa = PBXBuildFile; fileRef = 087AEBF12BBE2A9500394103 /* SF Compact Display.otf */; };
+		087AEBF32BBE2A9500394103 /* SF Compact Display.otf in Resources */ = {isa = PBXBuildFile; fileRef = 087AEBF12BBE2A9500394103 /* SF Compact Display.otf */; };
+		087AEBF52BBE2A9F00394103 /* SF Pro Display.otf in Resources */ = {isa = PBXBuildFile; fileRef = 087AEBF42BBE2A9F00394103 /* SF Pro Display.otf */; };
+		087AEBF62BBE2A9F00394103 /* SF Pro Display.otf in Resources */ = {isa = PBXBuildFile; fileRef = 087AEBF42BBE2A9F00394103 /* SF Pro Display.otf */; };
+		087AEBF72BBE740E00394103 /* LiveFriendActivityLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBC22BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift */; };
+		087AEBF92BBE770D00394103 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBF82BBE770D00394103 /* ImageLoader.swift */; };
+		087AEBFA2BBE770D00394103 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBF82BBE770D00394103 /* ImageLoader.swift */; };
+		087AEBFC2BBE7DA200394103 /* WXImageCompress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBFB2BBE7DA200394103 /* WXImageCompress.swift */; };
+		087AEBFD2BBE7DA200394103 /* WXImageCompress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AEBFB2BBE7DA200394103 /* WXImageCompress.swift */; };
 		087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
@@ -108,6 +121,11 @@
 		087AEBDF2BBCCE5500394103 /* LibraryGreeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryGreeting.swift; sourceTree = "<group>"; };
 		087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivityCurrentlyListening.swift; sourceTree = "<group>"; };
 		087AEBE32BBCFF0700394103 /* RefreshAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAuthorization.swift; sourceTree = "<group>"; };
+		087AEBE52BBD8BB400394103 /* FriendActivityYourFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendActivityYourFriends.swift; sourceTree = "<group>"; };
+		087AEBF12BBE2A9500394103 /* SF Compact Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Compact Display.otf"; sourceTree = "<group>"; };
+		087AEBF42BBE2A9F00394103 /* SF Pro Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display.otf"; sourceTree = "<group>"; };
+		087AEBF82BBE770D00394103 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		087AEBFB2BBE7DA200394103 /* WXImageCompress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXImageCompress.swift; sourceTree = "<group>"; };
 		087C558D2BB3B8C500F45562 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../ponder/ponder/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
@@ -139,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				087AEBBE2BBBC8BB00394103 /* SwiftUI.framework in Frameworks */,
+				087AEBEF2BBE281600394103 /* SteadmanUI in Frameworks */,
 				087AEBBC2BBBC8BB00394103 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +180,8 @@
 		081F80F52BB608F500D0D723 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				087AEBF12BBE2A9500394103 /* SF Compact Display.otf */,
+				087AEBF42BBE2A9F00394103 /* SF Pro Display.otf */,
 				08FFD2F72BB9EC6E008DFA7D /* Newake.otf */,
 				081F811B2BB6201F00D0D723 /* Times New Roman Condensed.otf */,
 				081F811D2BB620A700D0D723 /* Times New Roman Condensed Italic.otf */,
@@ -207,6 +228,7 @@
 			children = (
 				087AEBD72BBCC7B900394103 /* FriendActivityGreeting.swift */,
 				087AEBE12BBCF85000394103 /* FriendActivityCurrentlyListening.swift */,
+				087AEBE52BBD8BB400394103 /* FriendActivityYourFriends.swift */,
 			);
 			path = FriendActivityViews;
 			sourceTree = "<group>";
@@ -282,6 +304,8 @@
 				08FFD2F52BB8BAD1008DFA7D /* AlertItem.swift */,
 				08FFD2F92BB9F3EB008DFA7D /* ExpandingText.swift */,
 				08FFD3022BBA5D33008DFA7D /* CustomTabView.swift */,
+				087AEBF82BBE770D00394103 /* ImageLoader.swift */,
+				087AEBFB2BBE7DA200394103 /* WXImageCompress.swift */,
 			);
 			path = Lotus;
 			sourceTree = "<group>";
@@ -324,6 +348,9 @@
 			dependencies = (
 			);
 			name = LiveFriendActivityExtension;
+			packageProductDependencies = (
+				087AEBEE2BBE281600394103 /* SteadmanUI */,
+			);
 			productName = LiveFriendActivityExtension;
 			productReference = 087AEBB92BBBC8BB00394103 /* LiveFriendActivityExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -404,6 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				087AEBC92BBBC8BD00394103 /* Assets.xcassets in Resources */,
+				087AEBF32BBE2A9500394103 /* SF Compact Display.otf in Resources */,
+				087AEBF62BBE2A9F00394103 /* SF Pro Display.otf in Resources */,
+				087AEBED2BBE280A00394103 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				081F81202BB6249800D0D723 /* Times New Roman Condensed Bold.otf in Resources */,
+				087AEBF52BBE2A9F00394103 /* SF Pro Display.otf in Resources */,
 				08FFD2F82BB9EC6E008DFA7D /* Newake.otf in Resources */,
 				087C558E2BB3B8C500F45562 /* Preview Assets.xcassets in Resources */,
 				08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */,
 				081F811E2BB620A700D0D723 /* Times New Roman Condensed Italic.otf in Resources */,
+				087AEBF22BBE2A9500394103 /* SF Compact Display.otf in Resources */,
 				081F811C2BB6201F00D0D723 /* Times New Roman Condensed.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087AEBF02BBE282E00394103 /* Extensions.swift in Sources */,
 				087AEBC12BBBC8BB00394103 /* LiveFriendActivityBundle.swift in Sources */,
+				087AEBFA2BBE770D00394103 /* ImageLoader.swift in Sources */,
+				087AEBFD2BBE7DA200394103 /* WXImageCompress.swift in Sources */,
 				087AEBC72BBBC8BB00394103 /* AppIntent.swift in Sources */,
 				087AEBC32BBBC8BB00394103 /* LiveFriendActivityLiveActivity.swift in Sources */,
 				087AEBC52BBBC8BB00394103 /* LiveFriendActivity.swift in Sources */,
@@ -439,9 +474,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */,
+				087AEBF72BBE740E00394103 /* LiveFriendActivityLiveActivity.swift in Sources */,
 				08FFD2F12BB8B505008DFA7D /* Spotify.swift in Sources */,
 				08EC0EAC2BB38E5D00E4F592 /* CookieFinder.swift in Sources */,
 				08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */,
+				087AEBF92BBE770D00394103 /* ImageLoader.swift in Sources */,
 				08FFD3032BBA5D33008DFA7D /* CustomTabView.swift in Sources */,
 				087587E92BB4D04100DFCA82 /* SpotifyWebAPI.swift in Sources */,
 				087587EB2BB5037C00DFCA82 /* SimilarSongFinder.swift in Sources */,
@@ -450,11 +487,13 @@
 				087AEBE42BBCFF0700394103 /* RefreshAuthorization.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
 				08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */,
+				087AEBE62BBD8BB400394103 /* FriendActivityYourFriends.swift in Sources */,
 				08FFD3102BBB060F008DFA7D /* ACarouselViewModel.swift in Sources */,
 				087587E72BB4CE9700DFCA82 /* FriendActivity.swift in Sources */,
 				087AEBD82BBCC7B900394103 /* FriendActivityGreeting.swift in Sources */,
 				087AEBE02BBCCE5500394103 /* LibraryGreeting.swift in Sources */,
 				08FFD3112BBB060F008DFA7D /* AppLifeCycleModifier.swift in Sources */,
+				087AEBFC2BBE7DA200394103 /* WXImageCompress.swift in Sources */,
 				08FFD2FA2BB9F3EB008DFA7D /* ExpandingText.swift in Sources */,
 				081F80F42BB6088900D0D723 /* Extensions.swift in Sources */,
 				08EC0EAA2BB3899600E4F592 /* OpenSpotifyAPI.swift in Sources */,
@@ -672,6 +711,7 @@
 				INFOPLIST_FILE = Lotus/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -714,6 +754,7 @@
 				INFOPLIST_FILE = Lotus/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -829,6 +870,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 087587EC2BB503C800DFCA82 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		087AEBEE2BBE281600394103 /* SteadmanUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087C55872BB3B7F200F45562 /* XCRemoteSwiftPackageReference "steadmanui" */;
+			productName = SteadmanUI;
 		};
 		08FFD2F32BB8B827008DFA7D /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

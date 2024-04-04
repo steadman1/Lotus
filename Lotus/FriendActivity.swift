@@ -9,7 +9,11 @@ import SwiftUI
 import SteadmanUI
 
 struct FriendActivity: View {
+    @EnvironmentObject var spotify: Spotify
+    
     @State var friendActivity: SpotifyFriendActivity?
+    
+    @State var timer: Timer? = nil
     
     var body: some View {
         ScrollView {
@@ -18,7 +22,9 @@ struct FriendActivity: View {
                 FriendActivityGreeting()
                     .alignLeft()
                 
-                FriendActivityCurrentlyListening()
+                FriendActivityCurrentlyListening(friendActivity: $friendActivity)
+                
+                FriendActivityYourFriends(friendActivity: $friendActivity)
             } views: { views in
                 ForEach(Array(zip(views.indices, views)), id: \.0) { index, content in
                     content
@@ -28,6 +34,16 @@ struct FriendActivity: View {
                     }
                 }
             }.withNavBarTheEnd()
+        }.onAppear {
+            spotify.open_api.fetchFriendActivity { result in
+                self.friendActivity = result
+            }
+            
+            self.timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(20), repeats: true) { timer in
+                spotify.open_api.fetchFriendActivity { result in
+                    self.friendActivity = result
+                }
+            }
         }
     }
 }
