@@ -39,7 +39,8 @@ struct LoungeMostPlayed: View {
                     ZStack {
                         Rectangle()
                             .frame(width: width, height: width)
-                            .background(Color.foreground)
+                            .background(Color.background)
+                            .border(Color.foreground, width: 1)
                         
                         switch phase {
                         case .success(let image):

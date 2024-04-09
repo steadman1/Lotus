@@ -15,6 +15,11 @@ struct Library: View {
             Extract {
                 LibraryGreeting()
                     .alignLeft()
+                
+                LibraryPlaylists()
+                
+                Spacer().frame(height: Screen.padding)
+                
             } views: { views in
                 ForEach(Array(zip(views.indices, views)), id: \.0) { index, content in
                     content

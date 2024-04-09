@@ -56,7 +56,7 @@ struct PlaylistCarousel: View {
         ZStack(alignment: .top) {
             ACarousel(items, itemWidth: itemSize, spacing: 0, headspace: 0) { _, _, item in
                 VStack(spacing: Screen.halfPadding) {
-                    AsyncImage(url: item.images.first?.url) { phase in
+                    AsyncImage(url: item.images?.first?.url) { phase in
                         ZStack {
                             Rectangle()
                                 .frame(width: itemSize, height: itemSize)

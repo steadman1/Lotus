@@ -138,6 +138,21 @@ extension Date {
             return "Now"
         }
     }
+    
+    func within8Minutes() -> Bool {
+        let now = Date()
+        let difference = Calendar.current.dateComponents([.minute, .hour, .day, .weekOfYear, .month, .year], from: self, to: now)
+        
+        if let year = difference.year, year < 0,
+           let month = difference.month, month < 0,
+           let week = difference.weekOfYear, week < 0,
+           let day = difference.day, day < 0,
+           let hour = difference.hour, hour < 0,
+           let minute = difference.minute, minute <= 8 {
+            return true
+        }
+        return false
+    }
 }
 
 extension URL {

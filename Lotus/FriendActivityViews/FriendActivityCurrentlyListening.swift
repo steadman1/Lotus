@@ -16,7 +16,7 @@ struct FriendActivityCurrentlyListening: View {
     @Binding var friendActivity: SpotifyFriendActivity?
     
     private let itemSize: CGFloat = 160
-    private let xMinutesAgo: Int64 = Int64(Date().advanced(by: TimeInterval(-8 * 60)).timeIntervalSince1970) * 1000
+    private let xMinutesAgo: Int = Int(Date().advanced(by: TimeInterval(-8 * 60)).timeIntervalSince1970) * 1000
     
     var body: some View {
         let activeFriends = friendActivity?.friends.filter({ $0.timestamp > xMinutesAgo }) ?? []
@@ -51,7 +51,7 @@ struct FriendActivityCarousel: View {
         self._friendActivity = friendActivity
         self.activeFriends = activeFriends
         self.itemSize = itemSize
-        self._imageURLs = State(initialValue: Array(repeating: nil, count: friendActivity.wrappedValue!.friends.count))
+        self._imageURLs = State(initialValue: Array(repeating: nil, count: activeFriends.count))
     }
     
     var body: some View {
@@ -59,8 +59,7 @@ struct FriendActivityCarousel: View {
             + "|\n|".heightOfString(usingFont: Font.uiSansBody)
             + "|".heightOfString(usingFont: Font.uiSerifBody)
         VStack {
-            ACarousel(friendActivity!.friends.sorted(by: { $0.timestamp > $1.timestamp }),
-                      itemWidth: itemSize, spacing: 0, headspace: 0) { index, offset, item in
+            ACarousel(activeFriends, itemWidth: itemSize, spacing: 0, headspace: 0) { index, offset, item in
                 
                 VStack(spacing: Screen.halfPadding) {
                     ZStack(alignment: .topLeading) {
