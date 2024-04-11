@@ -11,12 +11,14 @@ import SteadmanUI
 struct LibraryGreeting: View {
     @EnvironmentObject var screen: Screen
     
+    @State private var isAddingItem = false
+    
     private let text = "Your\nLibrary"
     private let buttonSize: CGFloat = 48
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(alignment: .bottom) {
+            HStack {
                 Text(text.uppercased())
                     .font(.serifHeader)
                     .foregroundStyle(Color.primaryText)

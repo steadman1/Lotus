@@ -101,6 +101,24 @@ extension Font {
     static var uiSansNavigation: UIFont {
         UIFont(name: "TimesNewRomanMTStd-Cond", size: 16)!
     }
+    
+    // Serif Body Fonts
+    static var icon48: Font {
+        Font.custom("TimesNewRomanMTStd-Cond", size: 18)
+            .weight(.regular)
+    }
+    static var uiIcon48: UIFont {
+        UIFont(name: "TimesNewRomanMTStd-Cond", size: 18)!
+    }
+    
+    // Serif Body Fonts
+    static var icon40: Font {
+        Font.custom("TimesNewRomanMTStd-Cond", size: 12)
+            .weight(.regular)
+    }
+    static var uiIcon40: UIFont {
+        UIFont(name: "TimesNewRomanMTStd-Cond", size: 12)!
+    }
 }
 
 extension String {
@@ -210,7 +228,31 @@ public struct WithNavBarPadding: ViewModifier {
     }
 }
 
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
+struct CornerRadiusModifier: ViewModifier {
+    var radius: CGFloat
+    var corners: UIRectCorner
+    
+    func body(content: Content) -> some View {
+        content
+            .clipShape(RoundedCorner(radius: radius, corners: corners))
+    }
+}
+
 extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        modifier(CornerRadiusModifier(radius: radius, corners: corners))
+    }
+    
     func withNavBarPadding() -> some View {
         self.modifier(WithNavBarPadding(withTheEnd: false))
     }

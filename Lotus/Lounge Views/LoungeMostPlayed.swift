@@ -38,9 +38,8 @@ struct LoungeMostPlayed: View {
                 AsyncImage(url: album?.images?.first?.url) { phase in
                     ZStack {
                         Rectangle()
-                            .frame(width: width, height: width)
-                            .background(Color.background)
-                            .border(Color.foreground, width: 1)
+                            .stroke(Color.foreground, lineWidth: 1)
+                            .frame(width: width - 2, height: width - 2)
                         
                         switch phase {
                         case .success(let image):

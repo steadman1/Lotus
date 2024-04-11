@@ -49,6 +49,9 @@
 		08B55F972BC5BE1A000B22BC /* FolderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B55F962BC5BE1A000B22BC /* FolderItem.swift */; };
 		08B55F982BC5C1C4000B22BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081F80F32BB6088900D0D723 /* Extensions.swift */; };
 		08B55F9A2BC5C4D4000B22BC /* InlinePlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B55F992BC5C4D4000B22BC /* InlinePlaylist.swift */; };
+		08DC62FE2BC6F3F900A7969E /* QuickAddLibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62FD2BC6F3F900A7969E /* QuickAddLibraryItem.swift */; };
+		08DC63002BC6F74800A7969E /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC62FF2BC6F74800A7969E /* PlaylistView.swift */; };
+		08DC63022BC7392900A7969E /* DismissBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DC63012BC7392900A7969E /* DismissBar.swift */; };
 		08EC0E992BB3896F00E4F592 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E982BB3896F00E4F592 /* LotusApp.swift */; };
 		08EC0E9B2BB3896F00E4F592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC0E9A2BB3896F00E4F592 /* ContentView.swift */; };
 		08EC0E9F2BB3897000E4F592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08EC0E9E2BB3897000E4F592 /* Assets.xcassets */; };
@@ -133,6 +136,9 @@
 		08B55F932BC5BCEE000B22BC /* PinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinItem.swift; sourceTree = "<group>"; };
 		08B55F962BC5BE1A000B22BC /* FolderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItem.swift; sourceTree = "<group>"; };
 		08B55F992BC5C4D4000B22BC /* InlinePlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlinePlaylist.swift; sourceTree = "<group>"; };
+		08DC62FD2BC6F3F900A7969E /* QuickAddLibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddLibraryItem.swift; sourceTree = "<group>"; };
+		08DC62FF2BC6F74800A7969E /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
+		08DC63012BC7392900A7969E /* DismissBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissBar.swift; sourceTree = "<group>"; };
 		08EC0E952BB3896F00E4F592 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC0E982BB3896F00E4F592 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
 		08EC0E9A2BB3896F00E4F592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 				08EC0EAB2BB38E5D00E4F592 /* CookieFinder.swift */,
 				08EC0EAF2BB3B2EF00E4F592 /* NavigationBar.swift */,
 				08FFD2F92BB9F3EB008DFA7D /* ExpandingText.swift */,
+				08DC63012BC7392900A7969E /* DismissBar.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -311,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				08B55F992BC5C4D4000B22BC /* InlinePlaylist.swift */,
+				08DC62FD2BC6F3F900A7969E /* QuickAddLibraryItem.swift */,
+				08DC62FF2BC6F74800A7969E /* PlaylistView.swift */,
 			);
 			path = "Spotify Views";
 			sourceTree = "<group>";
@@ -535,6 +544,7 @@
 				08B55F942BC5BCEE000B22BC /* PinItem.swift in Sources */,
 				08FFD30D2BBB060F008DFA7D /* View+ReceiveTimer.swift in Sources */,
 				087AEBE42BBCFF0700394103 /* RefreshAuthorization.swift in Sources */,
+				08DC62FE2BC6F3F900A7969E /* QuickAddLibraryItem.swift in Sources */,
 				08EC0EAE2BB3908600E4F592 /* ObservableDefaults.swift in Sources */,
 				08FFD2F62BB8BAD1008DFA7D /* AlertItem.swift in Sources */,
 				087AEBE62BBD8BB400394103 /* FriendActivityYourFriends.swift in Sources */,
@@ -554,8 +564,10 @@
 				087587F02BB5055E00DFCA82 /* Library.swift in Sources */,
 				08FFD30E2BBB060F008DFA7D /* ACarousel.swift in Sources */,
 				087AEBD52BBC8F3E00394103 /* Search.swift in Sources */,
+				08DC63002BC6F74800A7969E /* PlaylistView.swift in Sources */,
 				087AEBDE2BBCCE2E00394103 /* SearchGreeting.swift in Sources */,
 				08FFD3012BBA483D008DFA7D /* LoungeHopBackIn.swift in Sources */,
+				08DC63022BC7392900A7969E /* DismissBar.swift in Sources */,
 				087AEBE22BBCF85000394103 /* FriendActivityCurrentlyListening.swift in Sources */,
 				08B55F9A2BC5C4D4000B22BC /* InlinePlaylist.swift in Sources */,
 				08FFD30F2BBB060F008DFA7D /* ACarouselAutoScroll.swift in Sources */,

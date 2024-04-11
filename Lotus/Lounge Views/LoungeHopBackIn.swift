@@ -89,7 +89,7 @@ struct PlaylistCarousel: View {
                     Circle()
                         .stroke(Color.foreground, lineWidth: 1)
                     Image(.chevronLeft)
-                        .font(.serifBody)
+                        .font(.icon48)
                         .foregroundStyle(Color.foreground)
                 }.frame(width: returnButtonSize, height: returnButtonSize)
                     .padding(.horizontal, Screen.padding)
